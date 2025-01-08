@@ -2,20 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  @apply max-sm:mx-4 max-md:mx-8 max-lg:mx-16 max-xl:mx-32 max-2xl:mx-64 py-8
+}
+
+.section_title {
+  @apply p-3 rounded-xl shadow-sm border
+}
+
+.tech_stack {
+  @apply border border-black rounded-full p-1 px-2 text-xs text-center
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  transition: filter 0.3s ease; /* Add this for the transition effect */
+  overflow: hidden;
+}
+
+  /* card animation when hover */
+  .card:hover {
+    filter: drop-shadow(0 5px 5px #dddddd);
+  }
+
+.hover_project_card:hover {
+  @apply hover:bg-[#eeeeee] active:bg-[#dddddd] transition-colors duration-150 ease-in
+}
+
+.certificate_card {
+  transition: transform .3;
+  @apply flex justify-between items-center border p-5 rounded-lg 
+}
+
+.certificate_card:hover {
+  transform: scale(1.01);
 }

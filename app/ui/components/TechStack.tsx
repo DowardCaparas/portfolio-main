@@ -1,0 +1,24 @@
+const techStackArray = [
+  "React",
+  "Next.js",
+  "Tailwind",
+  "MySQL",
+  "TypeScript",
+  "Node.js",
+  "PostGreSQL",
+];
+
+const TechStack = () => {
+  return (
+    <div className="flex-wrap flex gap-2">
+     {techStackArray.map((techstack) => (
+            <span key={techstack} className="tech_stack">
+                {techstack}
+            </span>
+        ))}
+    </div>
+       
+  );
+};
+
+export default TechStack;
