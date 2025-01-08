@@ -14,7 +14,7 @@ const Home = () => {
     <main className="flex flex-col">
       <div className="flex gap-6 font-medium mb-10">
         <Image
-          src="/images/Doward.webp"
+          src="/images/doward.webp"
           alt="Doward Caparas"
           width={150}
           height={150}
