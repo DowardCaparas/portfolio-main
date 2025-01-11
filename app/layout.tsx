@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from 'next/font/google';
 import "./globals.css";
+import Script from "next/script";
 
 const montserrat = Montserrat({ subsets: ['latin'] });
  
@@ -20,7 +21,25 @@ export default function RootLayout({
         className={`${montserrat.className} antialiased`}
       >
         {children}
+        {/* Embedded Chatbot Script */}
+        <Script
+          id="chatbot-config"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.embeddedChatbotConfig = {
+                chatbotId: "cOWIZgQezkVlIHKguM5Kl",
+                domain: "www.chatbase.co"
+              };
+            `,
+          }}
+        />
+        <Script
+          src="https://www.chatbase.co/embed.min.js"
+          strategy="lazyOnload" // Ensures it loads after the page
+        />
+
       </body>
+      
     </html>
   );
 }
