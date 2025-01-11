@@ -9,7 +9,7 @@ const SectionTitle = ({
   iconUrl: string;
 }) => {
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex justify-between">
       <div className="flex gap-2 mb-5">
         <Image
           src={iconUrl}
@@ -20,7 +20,9 @@ const SectionTitle = ({
         />
         <span className="font-bold text-lg">{title}</span>
       </div>
+      <div className="mt-1">
       {title === "Projects" && <ViewAll path="/project-page" />}
+      </div>
     </div>
   );
 };
