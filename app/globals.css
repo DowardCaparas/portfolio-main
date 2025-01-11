@@ -34,15 +34,10 @@ body {
     filter: drop-shadow(0 5px 5px #dddddd);
   }
 
-.hover_project_card:hover {
-  @apply hover:bg-[#eeeeee] active:bg-[#dddddd] transition-colors duration-150 ease-in
+.segment_card_hover:hover {
+  @apply hover:bg-[#e7e7e7] active:bg-[#eeeeee] transition-colors duration-150 ease-in 
 }
 
 .certificate_card {
-  transition: transform .3;
   @apply flex justify-between items-center border p-5 rounded-lg 
-}
-
-.certificate_card:hover {
-  transform: scale(1.01);
 }

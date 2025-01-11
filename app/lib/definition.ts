@@ -19,3 +19,9 @@ export type ProjectCardProps = {
       name: string;
       description: string;
 }
+
+export type SocialsProps = {
+      name: string;
+      url: string;
+      iconUrl: string;
+}

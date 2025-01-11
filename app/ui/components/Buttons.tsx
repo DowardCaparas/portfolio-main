@@ -34,36 +34,6 @@ export const Back = ({ path }: { path: string }) => {
   );
 };
 
-export const SendMail = ({
-  label,
-  iconUrl,
-}: {
-  label: string;
-  iconUrl: string;
-}) => {
-  const handleClick = () => {
-    window.location.href =
-      "mailto:dounhuward.c@gmail.com?subject=Hello&body=How are you?";
-  };
-
-  return (
-    <button
-      onClick={handleClick}
-      className="p-2 flex gap-3 bg-black text-white justify-center items-center 
-      w-2/3 rounded-lg"
-    >
-      <Image
-        src={iconUrl}
-        alt={label}
-        width={18}
-        height={18}
-        className="object-contain"
-      />
-      <span className="text-sm">{label}</span>
-    </button>
-  );
-};
-
 export const ProjectCardButton = ({path, imgURL, alternative,}: ProjectCardButtonProps) => {
   return (
     <Link href={path} target="_blank" rel="noopener noreferrer">
@@ -84,10 +54,34 @@ export const ProjectCard = ({ path, name, description }: ProjectCardProps) => {
       href={path}
       target="_blank"
       rel="noopener noreferrer"
-      className="border p-5 flex flex-col rounded-lg hover_project_card"
+      className="border p-5 flex flex-col rounded-lg segment_card_hover bg-[#eeeeee]"
     >
       <span className="font-bold text-sm">{name}</span>
       <span className="text-sm">{description}</span>
     </Link>
+  );
+};
+
+export const SendMail = () => {
+  const handleClick = () => {
+    window.location.href =
+      "mailto:dounhuward.c@gmail.com?subject=Hello&body=How are you?";
+  };
+
+  return (
+    <button
+      onClick={handleClick}
+      className="p-2 px-6 flex gap-2 ring-black ring-1 justify-center items-center rounded-lg
+      w-40"
+    >
+      <Image
+        src='/mail.svg'
+        alt="message icon"
+        width={18}
+        height={18}
+        className="object-contain"
+      />
+      <span className="text-sm">Send Email</span>
+    </button>
   );
 };

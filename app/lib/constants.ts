@@ -77,3 +77,17 @@ export const projectArray = [
       url: "https://www.freecodecamp.org/certification/Dounhuward_B_Caparas/responsive-web-design",
     },
   ];
+
+  // Socials
+  export const socials = [
+    {
+        name: "Linked in",
+        iconUrl: "/linkedin.svg",
+        url: 'https://www.linkedin.com/in/dounhuwardcaparas/'
+    },
+    {
+        name: "Github",
+        iconUrl: "/github.svg",
+        url: 'https://github.com/DowardCaparas'
+    },
+];

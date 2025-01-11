@@ -1,18 +1,19 @@
 import Image from "next/image";
 import SectionTitle from "./ui/components/SectionTitle";
 import TechStack from "./ui/components/TechStack";
-import { certificates, projectArray } from "./lib/constants";
+import { certificates, projectArray, socials } from "./lib/constants";
 import Projects from "./ui/components/Projects";
 import { SendMail } from "./ui/components/Buttons";
 import EducationCard from "./ui/components/EducationCard";
 import CertificationCard from "./ui/components/CertificationCard";
+import Socials from "./ui/components/Socials";
 
 const Home = () => {
   const filteredProjectArray = projectArray.slice(0, 4);
 
   return (
     <main className="flex flex-col">
-      <div className="flex gap-6 font-medium mb-10">
+      <div className="flex gap-4 font-medium mb-10 items-center">
         <Image
           src="/images/doward.webp"
           alt="Doward Caparas"
@@ -22,7 +23,7 @@ const Home = () => {
         />
         <div className="flex flex-col">
           <h1 className="font-bold text-xl">Doward Caparas</h1>
-          <span className="text-sm flex gap-2">
+          <span className="text-sm flex gap-1">
             <Image
               src="/mappin.svg"
               alt="map pin"
@@ -33,7 +34,8 @@ const Home = () => {
             Cavite, Philippines
           </span>
           <span className="my-4">Full Stack Web Developer</span>
-          <SendMail label="Send Email" iconUrl="/mail.svg" />
+          {/* Send email button */}
+          <SendMail />
         </div>
       </div>
 
@@ -61,17 +63,17 @@ const Home = () => {
         {/* Project section */}
         <section className="section_title card">
           <SectionTitle title="Projects" iconUrl="/panels.svg" />
-          <div className="grid gap-2 sm:grid-cols-2">
+          <span className="text-sm">Visit my projects</span>
+          <div className="grid gap-2 sm:grid-cols-2 mt-4">
             {filteredProjectArray.map((project) => (
-              <div key={project.name}>
                 <Projects
+                  key={project.name}
                   name={project.name}
                   image={project.image}
                   github={project.github}
                   url={project.url}
                   description={project.description}
                 />
-              </div>
             ))}
           </div>
         </section>
@@ -113,6 +115,33 @@ const Home = () => {
             and exploring hobbies like space science and creative brainstorming
             to stay inspired.
           </p>
+        </section>
+
+         {/* Connect section */}
+         <section className="section_title card">
+          <SectionTitle title="Connect" iconUrl="/mail.svg" />
+
+            <span className="text-sm">
+              Email:
+            </span>
+            <div className="bg-[#eeeeee] w-full p-3 font-medium mb-4 mt-2">
+              dounhuward.c@gmail.com
+            </div>
+
+            <span className="text-sm">
+              Social links:
+            </span>
+            <div className="flex gap-4 mt-2">
+              {socials.map((social) => (
+                  <Socials
+                    key={social.name} 
+                    name={social.name}
+                    iconUrl={social.iconUrl}
+                    url={social.url} 
+                  />
+              ))}
+            </div>
+            
         </section>
 
         {/* Footer */}
