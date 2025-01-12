@@ -1,14 +1,15 @@
 
-
 // Projects
+const github = "github.com/DowardCaparas/";
+
 export const projectArray = [
   {
     name: "Payflow",
     type: "Web app",
     image: "/images/PayFlow.webp",
     technologies: ["React", "Next.js", "TypeScript", "MySQL", "PostgreSQL", "Vercel"],
-    url: "https://payflow-io.vercel.app/",
-    github: "https://github.com/DowardCaparas/portfolio",
+    url: "payflow-io.vercel.app/",
+    github: `${github}payflow`,
     description: `Create, Update, and Delete Invoice of our customers`,
   },
   {
@@ -16,8 +17,8 @@ export const projectArray = [
     type: "Website",
     image: "/images/WebPortfolio.webp",
     technologies: ["HTML", "CSS", "Vanilla JavaScript"],
-    url: "https://dowardcaparas.github.io/portfolio/",
-    github: "https://github.com/DowardCaparas/portfolio",
+    url: "dowardcaparas.github.io/portfolio/",
+    github: `${github}portfolio`,
     description: `Single page website`,
   },
     {
@@ -25,8 +26,8 @@ export const projectArray = [
       type: "Web App",
       image: "/images/WeatherApp.webp",
       technologies: ["HTML", "CSS", "Vanilla JavaScript"],
-      url: "https://dowardcaparas.github.io/weather_app/",
-      github: "https://github.com/DowardCaparas/weather_app",
+      url: "dowardcaparas.github.io/weather_app/",
+      github: `${github}weather_app`,
       description: `Simple weather app`,
     },
     {
@@ -34,8 +35,8 @@ export const projectArray = [
       type: "Web App",
       image: "/images/ToDoApp.webp",
       technologies: ["HTML", "CSS", "Vanilla JavaScript"],
-      url: "https://dowardcaparas.github.io/todoApp/",
-      github: "https://github.com/DowardCaparas/todoApp",
+      url: "dowardcaparas.github.io/todoApp/",
+      github: `${github}todoApp`,
       description: `Basic task manager`,
     },
     {
@@ -49,8 +50,8 @@ export const projectArray = [
         "TypeScript",
         "Vercel",
       ],
-      url: "https://anime-vault-eta-mauve.vercel.app",
-      github: "https://github.com/DowardCaparas/anime_list",
+      url: "anime-vault-eta-mauve.vercel.app",
+      github: `${github}anime_list`,
       description: `Infinite scroll for looking anime movies/series`,
     },
     {
@@ -58,23 +59,25 @@ export const projectArray = [
       type: "Web App",
       image: "/images/DayCounter.webp",
       technologies: ["Tailwind", "React", "Next.js", "JavaScript"],
-      url: "https://dowardcaparas.github.io/RemainingDayCounter/",
-      github: "https://github.com/DowardCaparas/RemainingDayCounter",
+      url: "dowardcaparas.github.io/RemainingDayCounter/",
+      github: `${github}RemainingDayCounter`,
       description: `Remaining days calculator`,
     },
   ];
 
   // Certificates
+  const freeCodeCamp = "freecodecamp.org/certification/Dounhuward_B_Caparas/"
+
   export const certificates = [
     {
       name: "Foundational C-Sharp with Microsoft",
       from: "freeCodeCamp",
-      url: "https://www.freecodecamp.org/certification/Dounhuward_B_Caparas/foundational-c-sharp-with-microsoft",
+      url: `${freeCodeCamp}foundational-c-sharp-with-microsoft`,
     },
     {
       name: "Responsive Web Design",
       from: "freeCodeCamp",
-      url: "https://www.freecodecamp.org/certification/Dounhuward_B_Caparas/responsive-web-design",
+      url: `${freeCodeCamp}responsive-web-design`,
     },
   ];
 
@@ -83,11 +86,11 @@ export const projectArray = [
     {
         name: "Linked in",
         iconUrl: "/linkedin.svg",
-        url: 'https://www.linkedin.com/in/dounhuwardcaparas/'
+        url: 'linkedin.com/in/dounhuwardcaparas/'
     },
     {
         name: "Github",
         iconUrl: "/github.svg",
-        url: 'https://github.com/DowardCaparas'
+        url: 'github.com/DowardCaparas'
     },
 ];
