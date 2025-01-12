@@ -48,16 +48,18 @@ export const ProjectCardButton = ({path, imgURL, alternative,}: ProjectCardButto
   );
 };
 
-export const ProjectCard = ({ path, name, description }: ProjectCardProps) => {
+export const ProjectCard = ({ path, name, description, url }: ProjectCardProps) => {
+  const customURL = url.slice(8);
   return (
     <Link
       href={path}
       target="_blank"
       rel="noopener noreferrer"
-      className="border p-5 flex flex-col rounded-lg segment_card_hover bg-[#eeeeee]"
+      className="border p-3 flex flex-col rounded-lg"
     >
       <span className="font-bold text-sm">{name}</span>
       <span className="text-sm">{description}</span>
+      <span className="px-2 py-1 bg-[#eeeeee] text-sm z-50 mt-2">{customURL}</span>
     </Link>
   );
 };

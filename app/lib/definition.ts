@@ -18,6 +18,7 @@ export type ProjectCardProps = {
       path: string;
       name: string;
       description: string;
+      url: string;
 }
 
 export type SocialsProps = {

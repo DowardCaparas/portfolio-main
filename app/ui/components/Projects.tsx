@@ -49,6 +49,7 @@ const Projects = ({
           path={url}
           name={name}
           description={description}
+          url={url}
         />
       )}
     </>

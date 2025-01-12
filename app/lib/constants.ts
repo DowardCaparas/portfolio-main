@@ -1,6 +1,8 @@
 
+
 // Projects
-const github = "github.com/DowardCaparas/";
+const github = "https://github.com/DowardCaparas/";
+const githubPages = "https://dowardcaparas.github.io/";
 
 export const projectArray = [
   {
@@ -8,8 +10,8 @@ export const projectArray = [
     type: "Web app",
     image: "/images/PayFlow.webp",
     technologies: ["React", "Next.js", "TypeScript", "MySQL", "PostgreSQL", "Vercel"],
-    url: "payflow-io.vercel.app/",
-    github: `${github}payflow`,
+    url: "https://payflow-io.vercel.app/",
+    github: `${github}portfolio`,
     description: `Create, Update, and Delete Invoice of our customers`,
   },
   {
@@ -17,7 +19,7 @@ export const projectArray = [
     type: "Website",
     image: "/images/WebPortfolio.webp",
     technologies: ["HTML", "CSS", "Vanilla JavaScript"],
-    url: "dowardcaparas.github.io/portfolio/",
+    url: `${githubPages}portfolio/`,
     github: `${github}portfolio`,
     description: `Single page website`,
   },
@@ -26,7 +28,7 @@ export const projectArray = [
       type: "Web App",
       image: "/images/WeatherApp.webp",
       technologies: ["HTML", "CSS", "Vanilla JavaScript"],
-      url: "dowardcaparas.github.io/weather_app/",
+      url: `${githubPages}weather_app/`,
       github: `${github}weather_app`,
       description: `Simple weather app`,
     },
@@ -35,7 +37,7 @@ export const projectArray = [
       type: "Web App",
       image: "/images/ToDoApp.webp",
       technologies: ["HTML", "CSS", "Vanilla JavaScript"],
-      url: "dowardcaparas.github.io/todoApp/",
+      url: `${githubPages}todoApp/`,
       github: `${github}todoApp`,
       description: `Basic task manager`,
     },
@@ -50,7 +52,7 @@ export const projectArray = [
         "TypeScript",
         "Vercel",
       ],
-      url: "anime-vault-eta-mauve.vercel.app",
+      url: "https://anime-vault-eta-mauve.vercel.app",
       github: `${github}anime_list`,
       description: `Infinite scroll for looking anime movies/series`,
     },
@@ -59,14 +61,14 @@ export const projectArray = [
       type: "Web App",
       image: "/images/DayCounter.webp",
       technologies: ["Tailwind", "React", "Next.js", "JavaScript"],
-      url: "dowardcaparas.github.io/RemainingDayCounter/",
+      url: `${githubPages}RemainingDayCounter/`,
       github: `${github}RemainingDayCounter`,
       description: `Remaining days calculator`,
     },
   ];
 
   // Certificates
-  const freeCodeCamp = "freecodecamp.org/certification/Dounhuward_B_Caparas/"
+  const freeCodeCamp = "https://www.freecodecamp.org/certification/Dounhuward_B_Caparas/";
 
   export const certificates = [
     {
@@ -86,11 +88,11 @@ export const projectArray = [
     {
         name: "Linked in",
         iconUrl: "/linkedin.svg",
-        url: 'linkedin.com/in/dounhuwardcaparas/'
+        url: 'https://www.linkedin.com/in/dounhuwardcaparas/'
     },
     {
         name: "Github",
         iconUrl: "/github.svg",
-        url: 'github.com/DowardCaparas'
+        url: 'https://github.com/DowardCaparas'
     },
 ];

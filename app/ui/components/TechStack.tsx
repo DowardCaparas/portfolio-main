@@ -5,9 +5,9 @@ const techStackArray = [
   "MySQL",
   "TypeScript",
   "Node.js",
-  "PostGreSQL",
+  "PostgreSQL",
 ];
-
+  
 const TechStack = () => {
   return (
     <div className="flex-wrap flex gap-2">

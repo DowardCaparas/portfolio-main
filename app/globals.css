@@ -19,7 +19,7 @@ body {
 }
 
 .tech_stack {
-  @apply border border-black rounded-full p-1 px-2 text-xs text-center
+  @apply border border-black rounded-full p-1 px-2 text-sm text-center
 }
 
 .card {
@@ -39,5 +39,5 @@ body {
 }
 
 .certificate_card {
-  @apply flex justify-between items-center border p-5 rounded-lg 
+  @apply flex justify-between items-center border p-3 rounded-lg 
 }
