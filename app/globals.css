@@ -11,7 +11,12 @@
 body {
   max-width: 1200px;
   margin: 0 auto;
+  background-color: #F4F2EE;
   @apply max-sm:mx-4 max-md:mx-8 max-lg:mx-16 max-xl:mx-32 max-2xl:mx-64 py-8
+}
+
+.custom_border {
+  @apply border border-[#d6d6d6]
 }
 
 .section_title {
@@ -19,23 +24,22 @@ body {
 }
 
 .tech_stack {
-  @apply border border-black rounded-full p-1 px-2 text-sm text-center
+  @apply custom_border rounded-full p-1 px-2 text-xs text-center
+}
+
+.card_container {
+  @apply custom_border p-3 flex flex-col rounded-lg
 }
 
 .card {
   background-color: #fff;
   border-radius: 12px;
-  transition: filter 0.3s ease; /* Add this for the transition effect */
   overflow: hidden;
+  border: 1px solid #DFDEDA;
 }
 
-  /* card animation when hover */
-  .card:hover {
-    filter: drop-shadow(0 5px 5px #dddddd);
-  }
-
-.segment_card_hover:hover {
-  @apply hover:bg-[#e7e7e7] active:bg-[#eeeeee] transition-colors duration-150 ease-in 
+.project_card {
+  @apply hover:scale-105 transition hover:shadow-md active:scale-100 ease-in
 }
 
 .certificate_card {

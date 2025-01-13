@@ -7,11 +7,13 @@ const ProductPage = () => {
   return (
     <>
       <h2 className="font-bold text-2xl">Projects</h2>
+      
       <Back path="/" />
-      <div className="grid gap-2 sm:grid-cols-2">
+
+      <div className="grid gap-6 sm:grid-cols-2">
         {projectArray.map((project) => (
-          <div key={project.name}>
             <ProjectCard
+              key={project.name}
               name={project.name}
               type={project.type}
               image={project.image}
@@ -20,7 +22,6 @@ const ProductPage = () => {
               github={project.github}
               description={project.description}
             />
-          </div>
         ))}
       </div>
     </>

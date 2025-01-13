@@ -63,8 +63,10 @@ const Home = () => {
         {/* Project section */}
         <section className="section_title card">
           <SectionTitle title="Projects" iconUrl="/panels.svg" />
-          <span className="text-sm">Visit my projects</span>
-          <div className="grid gap-2 sm:grid-cols-2 mt-4">
+
+          <span className="text-sm ml-3">My previous works --</span>
+
+          <div className="grid gap-5 sm:grid-cols-2 mt-4 p-3">
             {filteredProjectArray.map((project) => (
                 <Projects
                   key={project.name}

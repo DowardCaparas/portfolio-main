@@ -8,12 +8,6 @@ export type ProjectArrayProps = {
       description: string;
 };
 
-export type ProjectCardButtonProps = {
-      path: string;
-      imgURL: string;
-      alternative: string;
-}
-
 export type ProjectCardProps = {
       path: string;
       name: string;

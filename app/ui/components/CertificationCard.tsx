@@ -15,7 +15,7 @@ const CertificationCard = ({
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="certificate_card segment_card_hover bg-[#eeeeee]"
+      className="certificate_card bg-[#eeeeee] hover:bg-[#dddddd] duration-200 transition-colors ease-in"
     >
       <div className=" flex flex-col ">
         <span className="font-bold text-sm">{name}</span>

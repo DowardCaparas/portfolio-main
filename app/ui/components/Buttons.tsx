@@ -1,6 +1,5 @@
 "use client";
 
-import { ProjectCardButtonProps, ProjectCardProps } from "@/app/lib/definition";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -21,7 +20,7 @@ export const ViewAll = ({ path }: { path: string }) => {
 
 export const Back = ({ path }: { path: string }) => {
   return (
-    <Link href={path} className="flex items-center gap-2 text-sm mb-10 mt-6">
+    <Link href={path} className="flex items-center gap-2 mb-10 mt-6">
       <Image
         src="/moveleft.svg"
         alt="move left"
@@ -30,36 +29,6 @@ export const Back = ({ path }: { path: string }) => {
         className="object-contain"
       />
       Back
-    </Link>
-  );
-};
-
-export const ProjectCardButton = ({path, imgURL, alternative,}: ProjectCardButtonProps) => {
-  return (
-    <Link href={path} target="_blank" rel="noopener noreferrer">
-      <Image
-        src={imgURL}
-        alt={alternative}
-        width={25}
-        height={25}
-        className="object-contain"
-      />
-    </Link>
-  );
-};
-
-export const ProjectCard = ({ path, name, description, url }: ProjectCardProps) => {
-  const customURL = url.slice(8);
-  return (
-    <Link
-      href={path}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="border p-3 flex flex-col rounded-lg"
-    >
-      <span className="font-bold text-sm">{name}</span>
-      <span className="text-sm">{description}</span>
-      <span className="px-2 py-1 bg-[#eeeeee] text-sm z-50 mt-2">{customURL}</span>
     </Link>
   );
 };
@@ -73,8 +42,9 @@ export const SendMail = () => {
   return (
     <button
       onClick={handleClick}
-      className="p-2 px-6 flex gap-2 ring-black ring-1 justify-center items-center rounded-lg
-      w-40"
+      className="p-2 px-6 flex gap-2 ring-black ring-1 justify-center items-center rounded-full
+      w-40 bg-white hover:shadow-md hover:shadow-[#222222] duration-150 ease-in
+      active:scale-90 hover:scale-105 transition"
     >
       <Image
         src='/mail.svg'

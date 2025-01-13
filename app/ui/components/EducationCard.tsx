@@ -1,7 +1,7 @@
 const EducationCard = () => {
   return (
     <div className="grid md:grid-cols-2 gap-2 grid-cols-1">
-      <div className="border p-3 flex flex-col rounded-lg">
+      <div className="card_container">
         <span className="font-bold text-sm">Cavite State University - Naic</span>
         <span className="text-sm mb-4">
           Bachelor of Science in Information Technology <br />
@@ -15,7 +15,7 @@ const EducationCard = () => {
           recognized as an Academic Achiever for the years 2021-2023.
         </p>
       </div>
-      <div className="border p-3 flex flex-col rounded-lg">
+      <div className="card_container">
         <span className="font-bold text-sm">Granby Colleges of Science and Technology Inc.</span>
         <span className="text-sm mb-4">
         Information and Communications Technology with a major in Programming <br />
