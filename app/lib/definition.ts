@@ -9,7 +9,6 @@ export type ProjectArrayProps = {
 };
 
 export type ProjectCardProps = {
-      path: string;
       name: string;
       description: string;
       url: string;

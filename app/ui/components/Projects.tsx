@@ -5,6 +5,10 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
+const newWindow = (path: string) => {
+  window.open(path, "_blank");
+};
+
 const Projects = ({
   name,
   type,
@@ -15,10 +19,6 @@ const Projects = ({
   description,
 }: ProjectArrayProps) => {
   const pathname = usePathname();
-
-  const goToGithubRepo = () => {
-    window.open(github, "_blank");
-  };
 
   return (
     <>
@@ -42,7 +42,8 @@ const Projects = ({
                 <button
                   className="hover:scale-105 active:scale-100 transition-transform
                              duration-150 ease-in"
-                  onClick={() => goToGithubRepo()}
+                  onClick={() => newWindow(github)}
+                  aria-label="going to new window"
                 >
                   <Image
                     src="/github.svg"
@@ -68,27 +69,26 @@ const Projects = ({
           </Link>
         </div>
       ) : (
-        <ProjectCard
-          path={url}
-          name={name}
-          description={description}
-          url={url}
-        />
+        <ProjectCard name={name} description={description} url={url} />
       )}
     </>
   );
 };
 
-const ProjectCard = ({ path, name, description, url }: ProjectCardProps) => {
+const ProjectCard = ({ name, description, url }: ProjectCardProps) => {
   const customURL = url.slice(8);
   return (
-    <Link href={path} className="card_container project_card">
+    <button
+      className="card_container project_card"
+      onClick={() => newWindow(url)}
+      aria-label="going to new window"
+    >
       <span className="font-bold text-sm">{name}</span>
       <span className="text-sm">{description}</span>
       <span className="px-2 py-1 bg-[#eeeeee] text-sm z-50 mt-2">
         {customURL}
       </span>
-    </Link>
+    </button>
   );
 };
 

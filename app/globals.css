@@ -28,7 +28,7 @@ body {
 }
 
 .card_container {
-  @apply custom_border p-3 flex flex-col rounded-lg
+  @apply custom_border p-3 flex flex-col rounded-lg items-start
 }
 
 .card {

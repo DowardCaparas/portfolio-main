@@ -2,7 +2,7 @@ const techStackArray = [
   "React",
   "Next.js",
   "Tailwind",
-  "MySQL",
+  "SQL",
   "TypeScript",
   "Node.js",
   "PostgreSQL",
