@@ -3,10 +3,11 @@ import SectionTitle from "./ui/components/SectionTitle";
 import TechStack from "./ui/components/TechStack";
 import { certificates, projectArray, socials } from "./lib/constants";
 import Projects from "./ui/components/Projects";
-import { SendMail } from "./ui/components/Buttons";
+import { Readmore, SendMail } from "./ui/components/Buttons";
 import EducationCard from "./ui/components/EducationCard";
 import CertificationCard from "./ui/components/CertificationCard";
 import Socials from "./ui/components/Socials";
+
 
 const Home = () => {
   const filteredProjectArray = projectArray.slice(0, 4);
@@ -54,11 +55,39 @@ const Home = () => {
           </p>
         </section>
 
-        {/* Tech stack section */}
+        <div className="flex gap-2 max-sm:flex-col">
+          {/* Tech stack section */}
         <section className="section_title card">
           <SectionTitle title="Tech Stack" iconUrl="/layers.svg" />
           <TechStack />
         </section>
+
+        {/* Achievement section */}
+        <section className="section_title card">
+          <SectionTitle title="Achievement" iconUrl="/trophy.svg" />
+          <div className="achievement_card">
+            <div className="flex items-center gap-2 mb-4">
+              <Image
+                src="/medal.svg"
+                alt="medal"
+                width={20}
+                height={20}
+                className="object-contain"
+              />
+              <span className="font-bold text-xl">Best Capstone</span>
+            </div>
+            <span className="font-medium">Mobile game</span>
+            <p className="mt-2 text-sm">
+              Simian: A Mobile Educational Game for Primary Level in Learning
+              Space Science
+            </p>
+            <div className="flex justify-between items-center">
+              <Readmore />
+              <i className="text-sm">August 2023</i>
+            </div>
+          </div>
+        </section>
+        </div>
 
         {/* Project section */}
         <section className="section_title card">
@@ -68,17 +97,19 @@ const Home = () => {
 
           <div className="grid gap-5 sm:grid-cols-2 mt-4 p-3">
             {filteredProjectArray.map((project) => (
-                <Projects
-                  key={project.name}
-                  name={project.name}
-                  image={project.image}
-                  github={project.github}
-                  url={project.url}
-                  description={project.description}
-                />
+              <Projects
+                key={project.name}
+                name={project.name}
+                image={project.image}
+                github={project.github}
+                url={project.url}
+                description={project.description}
+              />
             ))}
           </div>
         </section>
+
+        
 
         {/* Education section */}
         <section className="section_title card">
@@ -109,41 +140,35 @@ const Home = () => {
         <section className="section_title card">
           <SectionTitle title="Outside of coding" iconUrl="/bookopen.svg" />
           <p>
-            When I&apos;m not coding, I&apos;m diving into React, MDN, and Next.js docs,
-            playing my saxophone in a marching band, staying updated with IT
-            content creators, or earning extra cash through TikTok affiliate
-            marketing. <br /> <br />
-            I also unwind by watching movies to keep stress at bay
-            and exploring hobbies like space science and creative brainstorming
-            to stay inspired.
+            When I&apos;m not coding, I&apos;m diving into React, MDN, and
+            Next.js docs, playing my saxophone in a marching band, staying
+            updated with IT content creators, or earning extra cash through
+            TikTok affiliate marketing. <br /> <br />I also unwind by watching
+            movies to keep stress at bay and exploring hobbies like space
+            science and creative brainstorming to stay inspired.
           </p>
         </section>
 
-         {/* Connect section */}
-         <section className="section_title card">
+        {/* Connect section */}
+        <section className="section_title card">
           <SectionTitle title="Connect" iconUrl="/mail.svg" />
 
-            <span className="text-sm">
-              Email:
-            </span>
-            <div className="bg-[#eeeeee] w-full p-3 font-medium mb-4 mt-2">
-              dounhuward.c@gmail.com
-            </div>
+          <span className="text-sm">Email:</span>
+          <div className="bg-[#eeeeee] w-full p-3 font-medium mb-4 mt-2">
+            dounhuward.c@gmail.com
+          </div>
 
-            <span className="text-sm">
-              Social links:
-            </span>
-            <div className="flex gap-4 mt-2">
-              {socials.map((social) => (
-                  <Socials
-                    key={social.name} 
-                    name={social.name}
-                    iconUrl={social.iconUrl}
-                    url={social.url} 
-                  />
-              ))}
-            </div>
-            
+          <span className="text-sm">Social links:</span>
+          <div className="flex gap-4 mt-2">
+            {socials.map((social) => (
+              <Socials
+                key={social.name}
+                name={social.name}
+                iconUrl={social.iconUrl}
+                url={social.url}
+              />
+            ))}
+          </div>
         </section>
 
         {/* Footer */}

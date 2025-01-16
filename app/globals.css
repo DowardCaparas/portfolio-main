@@ -38,6 +38,12 @@ body {
   border: 1px solid #DFDEDA;
 }
 
+.achievement_card {
+  border-radius: 12px;
+  border: 1px solid #DFDEDA;
+  @apply bg-black text-white overflow-hidden p-3
+}
+
 .project_card {
   @apply hover:scale-105 transition hover:shadow-md active:scale-100 ease-in
 }
