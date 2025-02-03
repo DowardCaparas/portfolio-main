@@ -7,7 +7,6 @@ import { GoToProjectsButton, Readmore, SendMail } from "./ui/components/Buttons"
 import EducationCard from "./ui/components/EducationCard";
 import CertificationCard from "./ui/components/CertificationCard";
 import Socials from "./ui/components/Socials";
-import Link from "next/link";
 
 const Home = () => {
   const filteredProjectArray = projectArray.slice(0, 4);
