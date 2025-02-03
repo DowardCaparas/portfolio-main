@@ -58,6 +58,26 @@ export const SendMail = () => {
   );
 };
 
+export const GoToProjectsButton = () => {
+  return (
+    <Link
+      href='/project-page'
+      className="p-2 px-6 flex gap-2 ring-black ring-1 justify-center items-center rounded-lg
+      w-40 bg-black hover:shadow-md hover:shadow-[#222222] duration-150 ease-in
+      active:scale-90 hover:scale-105 transition text-white"
+    >
+      <Image
+        src='/panels.svg'
+        alt="message icon"
+        width={18}
+        height={18}
+        className="object-contain"
+      />
+      <span className="text-sm">Projects</span>
+    </Link>
+  );
+};
+
 export const Readmore = () => {
   return (
     <div className="mt-5 mb-2">

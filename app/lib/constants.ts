@@ -6,13 +6,22 @@ const githubPages = "https://dowardcaparas.github.io/";
 
 export const projectArray = [
   {
+    name: "Book Keeper",
+    type: "Web app",
+    image: "/images/BookKeeper.webp",
+    technologies: ["React", "Next.js", "TypeScript", "SQL", "PostgreSQL", "Vercel"],
+    url: "https://book-keeper-ebon.vercel.app/",
+    github: `${github}book-keeper`,
+    description: `Book management with customers CRUD`,
+  },
+  {
     name: "Payflow",
     type: "Web app",
     image: "/images/PayFlow.webp",
-    technologies: ["React", "Next.js", "TypeScript", "MySQL", "PostgreSQL", "Vercel"],
+    technologies: ["React", "Next.js", "TypeScript", "SQL", "PostgreSQL", "Vercel"],
     url: "https://payflow-io.vercel.app/",
-    github: `${github}portfolio`,
-    description: `Create, Update, and Delete Invoice of our customers`,
+    github: `${github}payflow`,
+    description: `Invoice management with customers CRUD`,
   },
   {
     name: "Anime Vault",

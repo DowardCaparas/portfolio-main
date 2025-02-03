@@ -3,11 +3,11 @@ import SectionTitle from "./ui/components/SectionTitle";
 import TechStack from "./ui/components/TechStack";
 import { certificates, projectArray, socials } from "./lib/constants";
 import Projects from "./ui/components/Projects";
-import { Readmore, SendMail } from "./ui/components/Buttons";
+import { GoToProjectsButton, Readmore, SendMail } from "./ui/components/Buttons";
 import EducationCard from "./ui/components/EducationCard";
 import CertificationCard from "./ui/components/CertificationCard";
 import Socials from "./ui/components/Socials";
-
+import Link from "next/link";
 
 const Home = () => {
   const filteredProjectArray = projectArray.slice(0, 4);
@@ -35,8 +35,12 @@ const Home = () => {
             Cavite, Philippines
           </span>
           <span className="my-4">Full Stack Web Developer</span>
-          {/* Send email button */}
-          <SendMail />
+         <div className="flex items-center gap-4">
+           {/* Send email button */}
+           <SendMail />
+          {/* Go to project page button */}
+          <GoToProjectsButton/>
+         </div>
         </div>
       </div>
 
@@ -57,43 +61,45 @@ const Home = () => {
 
         <div className="flex gap-2 max-sm:flex-col">
           {/* Tech stack section */}
-        <section className="section_title card">
-          <SectionTitle title="Tech Stack" iconUrl="/layers.svg" />
-          <TechStack />
-        </section>
+          <section className="section_title card">
+            <SectionTitle title="Tech Stack" iconUrl="/layers.svg" />
+            <TechStack />
+          </section>
 
-        {/* Achievement section */}
-        <section className="section_title card">
-          <SectionTitle title="Achievement" iconUrl="/trophy.svg" />
-          <div className="achievement_card">
-            <div className="flex items-center gap-2 mb-4">
-              <Image
-                src="/medal.svg"
-                alt="medal"
-                width={20}
-                height={20}
-                className="object-contain"
-              />
-              <span className="font-bold text-xl">Best Capstone</span>
+          {/* Achievement section */}
+          <section className="section_title card">
+            <SectionTitle title="Achievement" iconUrl="/trophy.svg" />
+            <div className="achievement_card">
+              <div className="flex items-center gap-2 mb-4">
+                <Image
+                  src="/medal.svg"
+                  alt="medal"
+                  width={20}
+                  height={20}
+                  className="object-contain"
+                />
+                <span className="font-bold text-xl">Best Capstone</span>
+              </div>
+              <span className="font-medium">Mobile game</span>
+              <p className="mt-2 text-sm">
+                Simian: A Mobile Educational Game for Primary Level in Learning
+                Space Science
+              </p>
+              <div className="flex justify-between items-center">
+                <Readmore />
+                <i className="text-sm">August 2023</i>
+              </div>
             </div>
-            <span className="font-medium">Mobile game</span>
-            <p className="mt-2 text-sm">
-              Simian: A Mobile Educational Game for Primary Level in Learning
-              Space Science
-            </p>
-            <div className="flex justify-between items-center">
-              <Readmore />
-              <i className="text-sm">August 2023</i>
-            </div>
-          </div>
-        </section>
+          </section>
         </div>
 
         {/* Project section */}
         <section className="section_title card">
           <SectionTitle title="Projects" iconUrl="/panels.svg" />
 
-          <span className="text-sm ml-3">My previous works --</span>
+          <span className="text-sm ml-3 font-medium">
+            My previous works with live demo --
+          </span>
 
           <div className="grid gap-5 sm:grid-cols-2 mt-4 p-3">
             {filteredProjectArray.map((project) => (
@@ -108,8 +114,6 @@ const Home = () => {
             ))}
           </div>
         </section>
-
-        
 
         {/* Education section */}
         <section className="section_title card">
