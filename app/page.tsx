@@ -3,7 +3,11 @@ import SectionTitle from "./ui/components/SectionTitle";
 import TechStack from "./ui/components/TechStack";
 import { certificates, projectArray, socials } from "./lib/constants";
 import Projects from "./ui/components/Projects";
-import { GoToProjectsButton, Readmore, SendMail } from "./ui/components/Buttons";
+import {
+  GoToProjectsButton,
+  Readmore,
+  SendMail,
+} from "./ui/components/Buttons";
 import EducationCard from "./ui/components/EducationCard";
 import CertificationCard from "./ui/components/CertificationCard";
 import Socials from "./ui/components/Socials";
@@ -34,12 +38,12 @@ const Home = () => {
             Cavite, Philippines
           </span>
           <span className="my-4 text-sm">Full Stack Web Developer</span>
-         <div className="flex max-md:flex-col gap-3">
-           {/* Send email button */}
-           <SendMail />
-          {/* Go to project page button */}
-          <GoToProjectsButton/>
-         </div>
+          <div className="flex max-md:flex-col gap-3">
+            {/* Send email button */}
+            <SendMail />
+            {/* Go to project page button */}
+            <GoToProjectsButton />
+          </div>
         </div>
       </div>
 
@@ -47,14 +51,16 @@ const Home = () => {
         {/* About section */}
         <section className="section_title card">
           <SectionTitle title="About" iconUrl="/info.svg" />
-          <p>
+          <p className="text-sm">
             I&apos;m a full-stack web developer from the Philippines. I build
-            responsive web apps using ReactJS and Tailwind CSS. I&apos;m
-            currently sharpening my skills in front-end development with NEXT.js
-            and TypeScript, and I&apos;ve been exploring UI libraries to improve
-            efficiency and responsiveness. While I&apos;m focused on front-end
-            work right now, I&apos;m also looking forward to learning more about
-            back-end development in the future.
+            responsive and scalable web applications using Next.js, TypeScript,
+            SQL, and PostgreSQL. My expertise lies in front-end development with
+            React.js and Tailwind CSS, ensuring efficiency and responsiveness. <br /><br />
+            I&apos;ve learned the difference between static and dynamic rendering,
+            and I know how to use React Server Actions to fetch data directly
+            from my database—without relying on useState or useEffect hooks. I&apos;m
+            always exploring new techniques to refine my skills and create
+            seamless web experiences.
           </p>
         </section>
 
@@ -97,7 +103,7 @@ const Home = () => {
           <SectionTitle title="Projects" iconUrl="/panels.svg" />
 
           <span className="text-sm ml-3 font-medium">
-          Click or tap a project to explore it.
+            Click or tap a project to explore it.
           </span>
 
           <div className="grid gap-5 sm:grid-cols-2 mt-4 p-3">
@@ -142,7 +148,7 @@ const Home = () => {
         {/* Outside coding section */}
         <section className="section_title card">
           <SectionTitle title="Outside of coding" iconUrl="/bookopen.svg" />
-          <p>
+          <p className="text-sm">
             When I&apos;m not coding, I&apos;m diving into React, MDN, and
             Next.js docs, playing my saxophone in a marching band, staying
             updated with IT content creators, or earning extra cash through
