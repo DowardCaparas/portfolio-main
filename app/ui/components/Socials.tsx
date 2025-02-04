@@ -6,7 +6,8 @@ import { SocialsProps } from "@/app/lib/definition";
 
 const Socials = ({ name, url, iconUrl }: SocialsProps) => {
   return (
-    <Link href={url} className="bg-[#eeeeee] w-16 p-3 rounded-lg segment_card_hover">
+    <Link href={url} className="bg-[#eeeeee] w-16 p-3 rounded-lg 
+    hover:bg-[#dadada] hover:scale-105 active:scale-95">
       <Image
         src={iconUrl}
         alt={name}

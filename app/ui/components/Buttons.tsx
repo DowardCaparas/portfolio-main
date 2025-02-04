@@ -42,8 +42,8 @@ export const SendMail = () => {
   return (
     <button
       onClick={handleClick}
-      className="p-2 px-6 flex gap-2 ring-black ring-1 justify-center items-center rounded-lg
-      w-40 bg-white hover:shadow-md hover:shadow-[#222222] duration-150 ease-in
+      className="p-2 flex gap-2 ring-black ring-1 justify-center rounded-lg
+       w-36 bg-white hover:shadow-md hover:shadow-[#222222] duration-150 ease-in
       active:scale-90 hover:scale-105 transition"
     >
       <Image
@@ -62,8 +62,8 @@ export const GoToProjectsButton = () => {
   return (
     <Link
       href='/project-page'
-      className="p-2 px-6 flex gap-2 ring-black ring-1 justify-center items-center rounded-lg
-      w-40 bg-black hover:shadow-md hover:shadow-[#222222] duration-150 ease-in
+      className="p-2 flex gap-2 ring-black ring-1 justify-center rounded-lg
+       w-36 bg-black hover:shadow-md hover:shadow-[#222222] duration-150 ease-in
       active:scale-90 hover:scale-105 transition text-white"
     >
       <Image

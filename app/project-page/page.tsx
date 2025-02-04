@@ -7,6 +7,7 @@ const ProductPage = () => {
   return (
     <>
       <h2 className="font-bold text-2xl">Projects</h2>
+      <span>Click or tap a project to explore it.</span>
       
       <Back path="/" />
 

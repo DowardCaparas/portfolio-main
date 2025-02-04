@@ -17,9 +17,9 @@ const Home = () => {
         <Image
           src="/images/doward.webp"
           alt="Doward Caparas"
-          width={150}
-          height={150}
-          className="rounded-lg"
+          width={185}
+          height={185}
+          className="rounded-lg object-contain grayscale hover:grayscale-0 transition duration-150 ease-in"
         />
         <div className="flex flex-col">
           <h1 className="font-bold text-xl">Doward Caparas</h1>
@@ -33,8 +33,8 @@ const Home = () => {
             />
             Cavite, Philippines
           </span>
-          <span className="my-4">Full Stack Web Developer</span>
-         <div className="flex items-center gap-4">
+          <span className="my-4 text-sm">Full Stack Web Developer</span>
+         <div className="flex max-md:flex-col gap-3">
            {/* Send email button */}
            <SendMail />
           {/* Go to project page button */}
@@ -97,7 +97,7 @@ const Home = () => {
           <SectionTitle title="Projects" iconUrl="/panels.svg" />
 
           <span className="text-sm ml-3 font-medium">
-            My previous works with live demo --
+          Click or tap a project to explore it.
           </span>
 
           <div className="grid gap-5 sm:grid-cols-2 mt-4 p-3">
