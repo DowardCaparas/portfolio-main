@@ -17,17 +17,21 @@ const Home = () => {
 
   return (
     <main className="flex flex-col">
-      <div className="flex gap-4 font-medium mb-10 items-center">
+
+      {/* Image with details and buttons */}
+      <div className="flex max-sm:flex-col gap-4 font-medium mb-16 items-center">
         <Image
           src="/images/doward.webp"
           alt="Doward Caparas"
           width={185}
           height={185}
-          className="rounded-lg object-contain grayscale hover:grayscale-0 transition duration-150 ease-in"
+          className="rounded-lg max-sm:w-[70%]"
         />
-        <div className="flex flex-col">
-          <h1 className="font-bold text-xl">Doward Caparas</h1>
-          <span className="text-sm flex gap-1">
+        <div className="flex flex-col max-sm:items-center max-sm:w-[70%]">
+          <h1 className="font-bold text-xl ">Doward Caparas</h1>
+
+          {/* Location with icon */}
+          <div className="flex gap-1">
             <Image
               src="/mappin.svg"
               alt="map pin"
@@ -35,10 +39,11 @@ const Home = () => {
               height={18}
               className="object-contain"
             />
-            Cavite, Philippines
-          </span>
-          <span className="my-4 text-sm">Full Stack Web Developer</span>
-          <div className="flex max-md:flex-col gap-3">
+            <span className="text-sm">Cavite, Philippines</span>
+          </div>
+          <span className="my-4 text-sm flex-shrink">Full Stack Web Developer</span>
+
+          <div className="inline-grid w-full gap-3">
             {/* Send email button */}
             <SendMail />
             {/* Go to project page button */}
@@ -55,12 +60,14 @@ const Home = () => {
             I&apos;m a full-stack web developer from the Philippines. I build
             responsive and scalable web applications using Next.js, TypeScript,
             SQL, and PostgreSQL. My expertise lies in front-end development with
-            React.js and Tailwind CSS, ensuring efficiency and responsiveness. <br /><br />
-            I&apos;ve learned the difference between static and dynamic rendering,
-            and I know how to use React Server Actions to fetch data directly
-            from my database—without relying on useState or useEffect hooks. I&apos;m
-            always exploring new techniques to refine my skills and create
-            seamless web experiences.
+            React.js and Tailwind CSS, ensuring efficiency and responsiveness.{" "}
+            <br />
+            <br />
+            I&apos;ve learned the difference between static and dynamic
+            rendering, and I know how to use React Server Actions to fetch data
+            directly from my database—without relying on useState or useEffect
+            hooks. I&apos;m always exploring new techniques to refine my skills
+            and create seamless web experiences.
           </p>
         </section>
 
