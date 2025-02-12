@@ -10,7 +10,7 @@ const SectionTitle = ({
 }) => {
   return (
     <div className="flex justify-between">
-      <div className="flex gap-2 mb-5">
+      <div className="flex gap-2 mb-4">
         <Image
           src={iconUrl}
           alt="info icon"

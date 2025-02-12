@@ -1,7 +1,7 @@
 import Image from "next/image";
 import SectionTitle from "./ui/components/SectionTitle";
 import TechStack from "./ui/components/TechStack";
-import { certificates, projectArray, socials } from "./lib/constants";
+import { certificates, projectArray, skills, socials } from "./lib/constants";
 import Projects from "./ui/components/Projects";
 import {
   GoToProjectsButton,
@@ -56,7 +56,7 @@ const Home = () => {
         {/* About section */}
         <section className="section_title card">
           <SectionTitle title="About" iconUrl="/info.svg" />
-          <p className="text-sm">
+          <p>
             I&apos;m a full-stack web developer from the Philippines. I build
             responsive and scalable web applications using Next.js, TypeScript,
             SQL, and PostgreSQL. My expertise lies in front-end development with
@@ -133,6 +133,16 @@ const Home = () => {
           <EducationCard />
         </section>
 
+        {/* Skills section */}
+        <section className="section_title card">
+          <SectionTitle title="Skills" iconUrl="/gear.svg" />
+          <ul className="px-5">
+            {skills.map((skill) => (
+              <li key={skill} className="list-disc">{skill}</li>
+            ))}
+          </ul>
+        </section>
+
         {/* Certificates section */}
         <section className="section_title card">
           <SectionTitle
@@ -155,7 +165,7 @@ const Home = () => {
         {/* Outside coding section */}
         <section className="section_title card">
           <SectionTitle title="Outside of coding" iconUrl="/bookopen.svg" />
-          <p className="text-sm">
+          <p>
             When I&apos;m not coding, I&apos;m diving into React, MDN, and
             Next.js docs, playing my saxophone in a marching band, staying
             updated with IT content creators, or earning extra cash through
