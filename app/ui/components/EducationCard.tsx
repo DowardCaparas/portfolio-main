@@ -1,6 +1,6 @@
 const EducationCard = () => {
   return (
-    <div className="grid md:grid-cols-2 gap-2 grid-cols-1">
+    <div className="grid md:grid-cols-2 gap-4 grid-cols-1">
       <div className="card_container">
         <span className="font-bold text-sm">Cavite State University - Naic</span>
         <span className="text-sm mb-4">

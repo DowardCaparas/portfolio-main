@@ -21,7 +21,7 @@ const SectionTitle = ({
         <span className="font-bold text-lg">{title}</span>
       </div>
       <div className="mt-1">
-      {title === "Projects" && <ViewAll path="/project-page" />}
+      {title === "Recent Projects" && <ViewAll path="/project-page" />}
       </div>
     </div>
   );

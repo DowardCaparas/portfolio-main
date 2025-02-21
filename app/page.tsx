@@ -1,7 +1,7 @@
 import Image from "next/image";
 import SectionTitle from "./ui/components/SectionTitle";
 import TechStack from "./ui/components/TechStack";
-import { certificates, projectArray, skills, socials } from "./lib/constants";
+import { accomplishments, certificates, projectArray, skills, socials } from "./lib/constants";
 import Projects from "./ui/components/Projects";
 import {
   GoToProjectsButton,
@@ -13,7 +13,7 @@ import CertificationCard from "./ui/components/CertificationCard";
 import Socials from "./ui/components/Socials";
 
 const Home = () => {
-  const filteredProjectArray = projectArray.slice(0, 4);
+  const filteredProjectArray = projectArray.slice(0, 3);
 
   return (
     <main className="flex flex-col">
@@ -53,7 +53,9 @@ const Home = () => {
       </div>
 
       <div className="flex flex-col gap-2">
-        {/* About section */}
+        
+        <div className="flex gap-2 max-sm:flex-col">
+          {/* About section */}
         <section className="section_title card">
           <SectionTitle title="About" iconUrl="/info.svg" />
           <p>
@@ -69,6 +71,65 @@ const Home = () => {
             hooks. I&apos;m always exploring new techniques to refine my skills
             and create seamless web experiences.
           </p>
+        </section>
+
+        {/* Project section */}
+        <section className="section_title card">
+          <SectionTitle title="Recent Projects" iconUrl="/panels.svg" />
+
+          <span className="text-sm ml-3 font-medium">
+            Click or tap a project to explore it.
+          </span>
+
+          <div className="grid gap-3 grid-cols-1 mt-2 p-3">
+            {filteredProjectArray.map((project) => (
+              <Projects
+                key={project.name}
+                name={project.name}
+                image={project.image}
+                github={project.github}
+                url={project.url}
+                description={project.description}
+              />
+            ))}
+          </div>
+        </section>
+        </div>
+
+        {/* Experience section */}
+        <section className="section_title card">
+          <SectionTitle
+            title="Experience"
+            iconUrl="/shieldcheck.svg"
+          />
+            <div className="inline-grid">
+              <span className="font-medium">Systems and Facility Management Dept.</span>
+              <span className="text-sm">P. IMES Corporation · Internship</span>
+            </div>
+            <ul className="px-5 mt-2">
+            {accomplishments.map((skill) => (
+              <li key={skill} className="list-disc">{skill}</li>
+            ))}
+          </ul>
+        </section>
+
+        {/* Certificates section */}
+        <section className="section_title card">
+          <SectionTitle
+            title="Recent Certification"
+            iconUrl="/shieldcheck.svg"
+          />
+          <div className="flex flex-col gap-2">
+            {certificates.map((cert) => (
+              <div key={cert.name}>
+                <CertificationCard
+                  name={cert.name}
+                  from={cert.from}
+                  url={cert.url}
+                />
+              </div>
+            ))}
+          </div>
         </section>
 
         <div className="flex gap-2 max-sm:flex-col">
@@ -105,28 +166,6 @@ const Home = () => {
           </section>
         </div>
 
-        {/* Project section */}
-        <section className="section_title card">
-          <SectionTitle title="Projects" iconUrl="/panels.svg" />
-
-          <span className="text-sm ml-3 font-medium">
-            Click or tap a project to explore it.
-          </span>
-
-          <div className="grid gap-5 sm:grid-cols-2 mt-4 p-3">
-            {filteredProjectArray.map((project) => (
-              <Projects
-                key={project.name}
-                name={project.name}
-                image={project.image}
-                github={project.github}
-                url={project.url}
-                description={project.description}
-              />
-            ))}
-          </div>
-        </section>
-
         {/* Education section */}
         <section className="section_title card">
           <SectionTitle title="Education" iconUrl="/graduationcap.svg" />
@@ -141,25 +180,6 @@ const Home = () => {
               <li key={skill} className="list-disc">{skill}</li>
             ))}
           </ul>
-        </section>
-
-        {/* Certificates section */}
-        <section className="section_title card">
-          <SectionTitle
-            title="Recent Certification"
-            iconUrl="/shieldcheck.svg"
-          />
-          <div className="flex flex-col gap-2">
-            {certificates.map((cert) => (
-              <div key={cert.name}>
-                <CertificationCard
-                  name={cert.name}
-                  from={cert.from}
-                  url={cert.url}
-                />
-              </div>
-            ))}
-          </div>
         </section>
 
         {/* Outside coding section */}

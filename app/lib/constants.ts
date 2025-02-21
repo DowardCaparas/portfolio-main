@@ -130,3 +130,11 @@ export const skills = [
   "Experienced in fetching data from an API",
   "Strong understanding of the DOM and its manipulation",
 ];
+
+export const accomplishments = [
+  "Maintained system units, ensuring optimal performance",
+  "Resolved network issues, minimizing downtime",
+  "Created engaging photo and video content for various projects",
+  "Accurately encoded employee data to streamline processes",
+  "Monitored CCTV systems, providing detailed reports for security enhancement"
+];
