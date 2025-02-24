@@ -1,11 +1,19 @@
 const techStackArray = [
+  "JavaScript",
+  "TypeScript",
+  "HTML5",
+  "CSS3",
   "React",
   "Next.js",
-  "Tailwind",
+  "Tailwind CSS",
   "SQL",
-  "TypeScript",
-  "Node.js",
   "PostgreSQL",
+  "Node.js",
+  "GraphQL",
+  "Git",
+  "GitHub",
+  "Vercel",
+  "REST API"
 ];
   
 const TechStack = () => {

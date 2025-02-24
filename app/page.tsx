@@ -1,7 +1,13 @@
 import Image from "next/image";
 import SectionTitle from "./ui/components/SectionTitle";
 import TechStack from "./ui/components/TechStack";
-import { accomplishments, certificates, projectArray, skills, socials } from "./lib/constants";
+import {
+  accomplishments,
+  certificates,
+  projectArray,
+  skills,
+  socials,
+} from "./lib/constants";
 import Projects from "./ui/components/Projects";
 import {
   GoToProjectsButton,
@@ -13,11 +19,10 @@ import CertificationCard from "./ui/components/CertificationCard";
 import Socials from "./ui/components/Socials";
 
 const Home = () => {
-  const filteredProjectArray = projectArray.slice(0, 3);
+  const filteredProjectArray = projectArray.slice(0, 4);
 
   return (
     <main className="flex flex-col">
-
       {/* Image with details and buttons */}
       <div className="flex max-sm:flex-col gap-4 font-medium mb-16 items-center">
         <Image
@@ -41,7 +46,9 @@ const Home = () => {
             />
             <span className="text-sm">Cavite, Philippines</span>
           </div>
-          <span className="my-4 text-sm flex-shrink">Full Stack Web Developer</span>
+          <span className="my-4 text-sm flex-shrink">
+            Full Stack Web Developer
+          </span>
 
           <div className="inline-grid w-full gap-3">
             {/* Send email button */}
@@ -53,62 +60,82 @@ const Home = () => {
       </div>
 
       <div className="flex flex-col gap-2">
-        
-        <div className="flex gap-2 max-sm:flex-col">
-          {/* About section */}
-        <section className="section_title card">
-          <SectionTitle title="About" iconUrl="/info.svg" />
-          <p>
-            I&apos;m a full-stack web developer from the Philippines. I build
-            responsive and scalable web applications using Next.js, TypeScript,
-            SQL, and PostgreSQL. My expertise lies in front-end development with
-            React.js and Tailwind CSS, ensuring efficiency and responsiveness.{" "}
-            <br />
-            <br />
-            I&apos;ve learned the difference between static and dynamic
-            rendering, and I know how to use React Server Actions to fetch data
-            directly from my database—without relying on useState or useEffect
-            hooks. I&apos;m always exploring new techniques to refine my skills
-            and create seamless web experiences.
-          </p>
-        </section>
+        <div className="grid grid-cols-2 max-md:grid-cols-1 gap-2">
+          <div className="flex gap-2 flex-col">
+            {/* About section */}
+            <section className="section_title card">
+              <SectionTitle title="About" iconUrl="/info.svg" />
+              <p>
+                I&apos;m a full-stack web developer from the Philippines. I
+                build responsive and scalable web applications using Next.js,
+                TypeScript, SQL, and PostgreSQL. My expertise lies in front-end
+                development with React.js and Tailwind CSS, ensuring efficiency
+                and responsiveness. <br />
+                <br />
+                I&apos;ve learned the difference between static and dynamic
+                rendering, and I know how to use React Server Actions to fetch
+                data directly from my database—without relying on useState or
+                useEffect hooks. I&apos;m always exploring new techniques to
+                refine my skills and create seamless web experiences.
+              </p>
+            </section>
 
-        {/* Project section */}
-        <section className="section_title card">
-          <SectionTitle title="Recent Projects" iconUrl="/panels.svg" />
-
-          <span className="text-sm ml-3 font-medium">
-            Click or tap a project to explore it.
-          </span>
-
-          <div className="grid gap-3 grid-cols-1 mt-2 p-3">
-            {filteredProjectArray.map((project) => (
-              <Projects
-                key={project.name}
-                name={project.name}
-                image={project.image}
-                github={project.github}
-                url={project.url}
-                description={project.description}
-              />
-            ))}
+            {/* Tech stack section */}
+            <section className="section_title card">
+              <SectionTitle title="Tech Stack" iconUrl="/layers.svg" />
+              <TechStack />
+            </section>
           </div>
-        </section>
+
+          {/* Project section */}
+          <section className="section_title card">
+            <SectionTitle title="Recent Projects" iconUrl="/panels.svg" />
+
+            <span className="text-sm ml-3 font-medium">
+              Click or tap a project to explore it.
+            </span>
+
+            <div className="grid gap-6 grid-cols-1 mt-2 p-3">
+              {filteredProjectArray.map((project) => (
+                <Projects
+                  key={project.name}
+                  name={project.name}
+                  image={project.image}
+                  github={project.github}
+                  url={project.url}
+                  description={project.description}
+                />
+              ))}
+            </div>
+          </section>
         </div>
 
         {/* Experience section */}
         <section className="section_title card">
-          <SectionTitle
-            title="Experience"
-            iconUrl="/shieldcheck.svg"
-          />
-            <div className="inline-grid">
-              <span className="font-medium">Systems and Facility Management Dept.</span>
-              <span className="text-sm">P. IMES Corporation · Internship</span>
-            </div>
-            <ul className="px-5 mt-2">
+          <SectionTitle title="Experience" iconUrl="/shieldcheck.svg" />
+          <div className="inline-grid">
+            <span className="font-medium">
+              Systems and Facility Management Dept.
+            </span>
+            <span className="text-sm">P. IMES Corporation · Internship</span>
+          </div>
+          <ul className="px-5 mt-2">
             {accomplishments.map((skill) => (
-              <li key={skill} className="list-disc">{skill}</li>
+              <li key={skill} className="list-disc">
+                {skill}
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* Skills section */}
+        <section className="section_title card">
+          <SectionTitle title="Skills" iconUrl="/gear.svg" />
+          <ul className="px-5">
+            {skills.map((skill) => (
+              <li key={skill} className="list-disc">
+                {skill}
+              </li>
             ))}
           </ul>
         </section>
@@ -133,10 +160,17 @@ const Home = () => {
         </section>
 
         <div className="flex gap-2 max-sm:flex-col">
-          {/* Tech stack section */}
+          {/* Outside coding section */}
           <section className="section_title card">
-            <SectionTitle title="Tech Stack" iconUrl="/layers.svg" />
-            <TechStack />
+            <SectionTitle title="Outside of coding" iconUrl="/bookopen.svg" />
+            <p>
+              When I&apos;m not coding, I&apos;m diving into React, MDN, and
+              Next.js docs, playing my saxophone in a marching band, staying
+              updated with IT content creators, or earning extra cash through
+              TikTok affiliate marketing. <br /> <br />I also unwind by watching
+              movies to keep stress at bay and exploring hobbies like space
+              science and creative brainstorming to stay inspired.
+            </p>
           </section>
 
           {/* Achievement section */}
@@ -170,29 +204,6 @@ const Home = () => {
         <section className="section_title card">
           <SectionTitle title="Education" iconUrl="/graduationcap.svg" />
           <EducationCard />
-        </section>
-
-        {/* Skills section */}
-        <section className="section_title card">
-          <SectionTitle title="Skills" iconUrl="/gear.svg" />
-          <ul className="px-5">
-            {skills.map((skill) => (
-              <li key={skill} className="list-disc">{skill}</li>
-            ))}
-          </ul>
-        </section>
-
-        {/* Outside coding section */}
-        <section className="section_title card">
-          <SectionTitle title="Outside of coding" iconUrl="/bookopen.svg" />
-          <p>
-            When I&apos;m not coding, I&apos;m diving into React, MDN, and
-            Next.js docs, playing my saxophone in a marching band, staying
-            updated with IT content creators, or earning extra cash through
-            TikTok affiliate marketing. <br /> <br />I also unwind by watching
-            movies to keep stress at bay and exploring hobbies like space
-            science and creative brainstorming to stay inspired.
-          </p>
         </section>
 
         {/* Connect section */}

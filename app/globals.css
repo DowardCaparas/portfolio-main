@@ -24,7 +24,7 @@ body {
 }
 
 .tech_stack {
-  @apply custom_border rounded-full p-1 px-2 text-sm text-center
+  @apply custom_border rounded-md p-1 px-3 text-sm text-center
 }
 
 .card_container {
