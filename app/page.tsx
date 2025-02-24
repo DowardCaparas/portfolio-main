@@ -24,12 +24,12 @@ const Home = () => {
   return (
     <main className="flex flex-col">
       {/* Image with details and buttons */}
-      <div className="flex max-sm:flex-col gap-4 font-medium mb-16 items-center">
+      <div className="flex max-sm:flex-col gap-6 font-medium mb-10 items-center">
         <Image
           src="/images/doward.webp"
           alt="Doward Caparas"
-          width={185}
-          height={185}
+          width={160}
+          height={160}
           className="rounded-lg max-sm:w-[70%]"
         />
         <div className="flex flex-col max-sm:items-center max-sm:w-[70%]">
@@ -47,10 +47,10 @@ const Home = () => {
             <span className="text-sm">Cavite, Philippines</span>
           </div>
           <span className="my-4 text-sm flex-shrink">
-            Full Stack Web Developer
+           Aspiring Full Stack Web Developer
           </span>
 
-          <div className="inline-grid w-full gap-3">
+          <div className="flex max-sm:flex-col w-full gap-3">
             {/* Send email button */}
             <SendMail />
             {/* Go to project page button */}
