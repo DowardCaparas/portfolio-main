@@ -56,6 +56,15 @@ export const projectArray = [
     description: `Basic task manager`,
   },
   {
+    name: "BinDec",
+    type: "Web App",
+    image: "/images/BinDec.webp",
+    technologies: ["HTML", "CSS", "Vanilla JavaScript"],
+    url: "https://doward-caparas-bin-dec.vercel.app",
+    github: `${github}BinDec`,
+    description: `Decimal to Binary converter and vice versa`,
+  },
+  {
     name: "Portfolio Website",
     type: "Website",
     image: "/images/WebPortfolio.webp",
