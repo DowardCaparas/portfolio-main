@@ -13,7 +13,8 @@ const techStackArray = [
   "Git",
   "GitHub",
   "Vercel",
-  "REST API"
+  "REST API",
+  "Vite"
 ];
   
 const TechStack = () => {
