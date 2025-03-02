@@ -76,6 +76,15 @@ export const projectArray = [
   {
     name: "Portfolio Website",
     type: "Website",
+    image: "/images/Sophia-Portfolio.webp",
+    technologies: ["React", "Next.js", "TypeScript", "Tailwind"],
+    url: "https://sophia-site.vercel.app",
+    github: `${github}sophia-portfolio`,
+    description: `Single page website`,
+  },
+  {
+    name: "Portfolio Website",
+    type: "Website",
     image: "/images/WebPortfolio.webp",
     technologies: ["HTML5", "CSS3", "Vanilla JavaScript"],
     url: `${githubPages}portfolio`,
