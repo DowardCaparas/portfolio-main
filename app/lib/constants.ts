@@ -23,6 +23,15 @@ export const projectArray = [
     description: `Invoice management with customers CRUD`,
   },
   {
+    name: "Content Summarizer AI",
+    type: "Web app",
+    image: "/images/AIContentSummarizer.webp",
+    technologies: ["React", "Next.js", "TypeScript", "Vercel", "OpenAI"],
+    url: "https://doward-caparas-content-summarizer.vercel.app",
+    github: `${github}ai-content-summarizer`,
+    description: `It can summarize the article or content`,
+  },
+  {
     name: "QR Code Generator",
     type: "Web app",
     image: "/images/QRCodeGenerator.webp",

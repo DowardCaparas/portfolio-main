@@ -12,9 +12,9 @@ const ProductPage = () => {
       <Back path="/" />
 
       <div className="grid gap-6 sm:grid-cols-2">
-        {projectArray.map((project) => (
+        {projectArray.map((project, index) => (
             <ProjectCard
-              key={project.name}
+              key={project.name + index}
               name={project.name}
               type={project.type}
               image={project.image}
