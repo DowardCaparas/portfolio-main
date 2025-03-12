@@ -141,7 +141,7 @@ export const socials = [
   {
     name: "Linked in",
     iconUrl: "/linkedin.svg",
-    url: 'https://www.linkedin.com/in/dounhuwardcaparas/'
+    url: 'https://www.linkedin.com/in/dounhuwardcaparas'
   },
   {
     name: "Github",
@@ -152,6 +152,11 @@ export const socials = [
     name: "Tiktok",
     iconUrl: "/tiktok.svg",
     url: 'https://www.tiktok.com/@dowardcps?_t=ZS-8tr6VKCO5FH&_r=1'
+  },
+  {
+    name: "HackerRank",
+    iconUrl: "/hackerrank.svg",
+    url: 'https://www.hackerrank.com/profile/dounhuward_c'
   },
 ];
 

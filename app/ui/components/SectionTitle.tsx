@@ -14,8 +14,8 @@ const SectionTitle = ({
         <Image
           src={iconUrl}
           alt="info icon"
-          width={18}
-          height={18}
+          width={25}
+          height={25}
           className="object-contain"
         />
         <span className="font-bold text-lg">{title}</span>

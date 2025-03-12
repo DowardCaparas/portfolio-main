@@ -16,15 +16,20 @@ import {
 } from "./ui/components/Buttons";
 import EducationCard from "./ui/components/EducationCard";
 import CertificationCard from "./ui/components/CertificationCard";
-import Socials from "./ui/components/Socials";
+import Links from "./ui/components/Links";
 
 const Home = () => {
   const filteredProjectArray = projectArray.slice(0, 4);
 
   return (
-    <main className="flex flex-col">
+    
+   <div className="">
+    <nav className="bg-[#0E141E] py-4 md:px-12 px-4 w-full text-white ">
+      <span className="font-bold text-xl">DC</span>
+    </nav>
+    <main className="flex flex-col mt-8 md:px-32 px-4">
       {/* Image with details and buttons */}
-      <div className="flex max-sm:flex-col gap-6 font-medium mb-10 items-center">
+      <div className="flex max-sm:flex-col gap-6 font-medium mb-16 items-center">
         <Image
           src="/images/doward.webp"
           alt="Doward Caparas"
@@ -46,7 +51,10 @@ const Home = () => {
             />
             <span className="text-sm">Cavite, Philippines</span>
           </div>
-          <span className="my-4 text-sm flex-shrink">
+
+          <span className="text-sm mt-1">dounhuward.c@gmail.com</span>
+
+          <span className="my-4 text-sm flex-shrink font-semibold">
            Aspiring Full Stack Web Developer
           </span>
 
@@ -59,9 +67,9 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-2">
-        <div className="grid grid-cols-2 max-md:grid-cols-1 gap-2">
-          <div className="flex gap-2 flex-col">
+      <div className="flex flex-col gap-10">
+        <div className="grid grid-cols-2 max-md:grid-cols-1 gap-10">
+          <div className="flex gap-10 flex-col">
             {/* About section */}
             <section className="section_title card">
               <SectionTitle title="About" iconUrl="/info.svg" />
@@ -159,7 +167,7 @@ const Home = () => {
           </div>
         </section>
 
-        <div className="flex gap-2 max-sm:flex-col">
+        <div className="flex gap-10 max-sm:flex-col">
           {/* Outside coding section */}
           <section className="section_title card">
             <SectionTitle title="Outside of coding" iconUrl="/bookopen.svg" />
@@ -206,19 +214,13 @@ const Home = () => {
           <EducationCard />
         </section>
 
-        {/* Connect section */}
+        {/* Links section */}
         <section className="section_title card">
-          <SectionTitle title="Connect" iconUrl="/mail.svg" />
+          <SectionTitle title="Links" iconUrl="/link.svg" />
 
-          <span className="text-sm">Email:</span>
-          <div className="bg-[#eeeeee] w-full p-3 font-medium mb-4 mt-2">
-            dounhuward.c@gmail.com
-          </div>
-
-          <span className="text-sm">Social links:</span>
-          <div className="flex gap-4 mt-2">
+          <div className="flex flex-col items-start gap-4">
             {socials.map((social) => (
-              <Socials
+              <Links
                 key={social.name}
                 name={social.name}
                 iconUrl={social.iconUrl}
@@ -229,12 +231,13 @@ const Home = () => {
         </section>
 
         {/* Footer */}
-        <footer className="text-center flex flex-col mt-10 text-sm">
+        <footer className="text-center flex flex-col my-10 text-sm">
           <span>&copy; 2025 Dounhuward B. Caparas</span>
           <span>All rights reserved.</span>
         </footer>
       </div>
     </main>
+   </div>
   );
 };
 

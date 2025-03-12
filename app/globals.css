@@ -9,18 +9,15 @@
 }
 
 body {
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: #F4F2EE;
-  @apply max-sm:mx-4 max-md:mx-8 max-lg:mx-16 max-xl:mx-32 max-2xl:mx-64 py-8
+  background-color: #F7F8FD;
 }
 
 .custom_border {
-  @apply border border-[#d6d6d6]
+  @apply border border-[#e6e6e6]
 }
 
 .section_title {
-  @apply p-3 rounded-xl shadow-sm border
+  @apply p-10 rounded-xl
 }
 
 .tech_stack {
@@ -35,7 +32,7 @@ body {
   background-color: #fff;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid #DFDEDA;
+  border: 1px solid #ececec;
   width: 100%;
 }
 
