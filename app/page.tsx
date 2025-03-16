@@ -63,7 +63,7 @@ const Home = () => {
       </div>
 
       <div className="flex flex-col gap-10">
-        <div className="grid grid-cols-2 max-md:grid-cols-1 gap-10">
+        <div className="grid xl:grid-cols-2 grid-cols-1 gap-10">
           <div className="flex gap-10 flex-col">
             {/* About section */}
             <section className="section_title card">
