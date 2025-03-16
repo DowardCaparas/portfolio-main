@@ -24,8 +24,8 @@ const Projects = ({
     <>
       {pathname === "/project-page" ? (
         <div
-          className="card inline-grid hover:shadow-md active:bg-[#f7f7f7]
-           duration-200 transition ease-in "
+          className="card inline-grid hover:shadow-lg active:bg-[#000000]
+           duration-200 transition ease-in"
         >
           <Link href={url} target="_blank" rel="noopener noreferrer">
             <Image
@@ -85,7 +85,7 @@ const ProjectCard = ({ name, description, url }: ProjectCardProps) => {
     >
       <span className="font-bold text-sm">{name}</span>
       <span className="text-sm">{description}</span>
-      <span className="px-2 py-1 bg-[#eeeeee] text-xs z-50 mt-2">
+      <span className="px-2 py-1 bg-white text-xs z-50 mt-2">
         {customURL}
       </span>
     </button>

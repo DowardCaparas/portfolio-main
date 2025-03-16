@@ -22,12 +22,7 @@ const Home = () => {
   const filteredProjectArray = projectArray.slice(0, 4);
 
   return (
-    
-   <div className="">
-    <nav className="bg-[#0E141E] py-4 md:px-12 px-4 w-full text-white ">
-      <span className="font-bold text-xl">DC</span>
-    </nav>
-    <main className="flex flex-col mt-8 md:px-32 px-4">
+    <main className="flex flex-col mt-8 md:px-32 px-4 transition-all duration-150 ease-in">
       {/* Image with details and buttons */}
       <div className="flex max-sm:flex-col gap-6 font-medium mb-16 items-center">
         <Image
@@ -103,7 +98,7 @@ const Home = () => {
               Click or tap a project to explore it.
             </span>
 
-            <div className="grid gap-6 grid-cols-1 mt-2 p-3">
+            <div className="grid gap-7 grid-cols-1 mt-2 p-3">
               {filteredProjectArray.map((project) => (
                 <Projects
                   key={project.name}
@@ -237,7 +232,6 @@ const Home = () => {
         </footer>
       </div>
     </main>
-   </div>
   );
 };
 

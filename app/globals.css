@@ -21,19 +21,19 @@ body {
 }
 
 .tech_stack {
-  @apply custom_border rounded-md p-1 px-3 text-sm text-center
+  @apply rounded-md p-1 px-4 py-2 text-sm text-center bg-gray-200 font-semibold text-gray-600
 }
 
 .card_container {
-  @apply custom_border p-3 flex flex-col rounded-lg items-start
+  @apply custom_border p-3 flex flex-col rounded-lg items-start gap-2 bg-gray-100
 }
 
 .card {
   background-color: #fff;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid #ececec;
   width: 100%;
+  @apply ring-1 ring-gray-300
 }
 
 .achievement_card {
@@ -43,7 +43,7 @@ body {
 }
 
 .project_card {
-  @apply hover:scale-105 transition hover:shadow-md active:scale-100 ease-in
+  @apply hover:scale-105 transition shadow-md shadow-gray-200 active:scale-100 ease-in 
 }
 
 .certificate_card {

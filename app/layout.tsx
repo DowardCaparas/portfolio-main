@@ -19,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${montserrat.className} antialiased`}>
-
+      <nav className="bg-[#0E141E] transition-all duration-150 ease-in py-4 md:px-12 px-4 w-full text-white ">
+      <span className="font-bold text-xl">DC</span>
+    </nav>
         {children}
         {/* Embedded Chatbot Script */}
         <Script
