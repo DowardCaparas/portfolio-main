@@ -13,18 +13,19 @@ import {
   GoToProjectsButton,
   Readmore,
   SendMail,
+  ViewAll,
 } from "./ui/components/Buttons";
 import EducationCard from "./ui/components/EducationCard";
-import CertificationCard from "./ui/components/CertificationCard";
+import {CertificateCardForHome} from "./ui/components/CertificationCard";
 import Links from "./ui/components/Links";
 
 const Home = () => {
   const filteredProjectArray = projectArray.slice(0, 4);
 
   return (
-    <main className="flex flex-col mt-8 md:px-32 px-4 transition-all duration-150 ease-in">
+    <main className="flex flex-col lg:px-32 md:px-16 px-4 w-full transition-all duration-150 ease-in">
       {/* Image with details and buttons */}
-      <div className="flex max-sm:flex-col gap-6 font-medium mb-16 items-center">
+      <div className="flex max-sm:flex-col gap-6 font-medium my-12 items-center">
         <Image
           src="/images/doward.webp"
           alt="Doward Caparas"
@@ -33,7 +34,7 @@ const Home = () => {
           className="rounded-lg max-sm:w-[70%]"
         />
         <div className="flex flex-col max-sm:items-center max-sm:w-[70%]">
-          <h1 className="font-bold text-xl ">Doward Caparas</h1>
+          <h1 className="font-bold text-2xl ">Doward Caparas</h1>
 
           {/* Location with icon */}
           <div className="flex gap-1">
@@ -50,7 +51,7 @@ const Home = () => {
           <span className="text-sm mt-1">dounhuward.c@gmail.com</span>
 
           <span className="my-4 text-sm flex-shrink font-semibold">
-           Aspiring Full Stack Web Developer
+            Aspiring Full Stack Web Developer
           </span>
 
           <div className="flex max-sm:flex-col w-full gap-3">
@@ -92,9 +93,15 @@ const Home = () => {
 
           {/* Project section */}
           <section className="section_title card">
-            <SectionTitle title="Recent Projects" iconUrl="/panels.svg" />
+          <div className="flex justify-between text-center">
+            <SectionTitle
+              title="Recent Projects"
+              iconUrl="/panels.svg"
+            />
+            <ViewAll path="/project-page" />
+          </div>
 
-            <span className="text-sm ml-3 font-medium">
+            <span className="text-sm font-medium mb-2">
               Click or tap a project to explore it.
             </span>
 
@@ -145,14 +152,17 @@ const Home = () => {
 
         {/* Certificates section */}
         <section className="section_title card">
-          <SectionTitle
-            title="Recent Certification"
-            iconUrl="/shieldcheck.svg"
-          />
+          <div className="flex justify-between items-center">
+            <SectionTitle
+              title="Recent Certifications"
+              iconUrl="/shieldcheck.svg"
+            />
+            <ViewAll path="/certificate-page" />
+          </div>
           <div className="flex flex-col gap-2">
             {certificates.map((cert) => (
               <div key={cert.name}>
-                <CertificationCard
+                <CertificateCardForHome
                   name={cert.name}
                   from={cert.from}
                   url={cert.url}
@@ -224,12 +234,6 @@ const Home = () => {
             ))}
           </div>
         </section>
-
-        {/* Footer */}
-        <footer className="text-center flex flex-col my-10 text-sm">
-          <span>&copy; 2025 Dounhuward B. Caparas</span>
-          <span>All rights reserved.</span>
-        </footer>
       </div>
     </main>
   );

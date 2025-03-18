@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ShowCredential } from "./Buttons";
 
-const CertificationCard = ({
+export const CertificateCardForHome = ({
   name,
   from,
   url,
@@ -34,4 +35,42 @@ const CertificationCard = ({
   );
 };
 
-export default CertificationCard;
+export const CertificateCardForPage = ({
+  name,
+  from,
+  url,
+  image,
+  description,
+}: {
+  name: string;
+  from: string;
+  url: string;
+  image: string;
+  description: string;
+}) => {
+  return (
+    <div className="flex flex-col gap-14">
+      <div
+        className="bg-gray-200 p-10 flex max-xl:flex-col 
+          max-xl:items-center text-center gap-10 rounded-lg"
+      >
+        <Image
+          src={image}
+          alt={name}
+          width={500}
+          height={500}
+          className="object-contain"
+        />
+        <div
+          className="flex flex-col justify-between items-start max-xl:items-center 
+            gap-6"
+        >
+          <span className="text-xl font-semibold">{name}</span>
+          <span className="">from: <span className="font-medium">{from}</span></span>
+          <p className="xl:text-justify md:w-[80%] leading-7">{description}</p>
+          <ShowCredential url={url} />
+        </div>
+      </div>
+    </div>
+  );
+};

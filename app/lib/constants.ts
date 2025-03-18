@@ -125,21 +125,43 @@ const freeCodeCamp = "https://www.freecodecamp.org/certification/Dounhuward_B_Ca
 
 export const certificates = [
   {
+    name: "Problem Solving (Basic)",
+    from: "HackerRank",
+    url: `https://www.hackerrank.com/certificates/ec24b289f045`,
+    image: `/images/ProblemSolving(Basic)Cert.webp`,
+    description: `It covers basic topics of Data Structures (such as Arrays, Strings) 
+    and Algorithms (such as Sorting and Searching).`,
+  },
+  {
+    name: "React (Basic)",
+    from: "HackerRank",
+    url: `https://www.hackerrank.com/certificates/57c3315cf170`,
+    image: `/images/React(Basic)Cert.webp`,
+    description: `React (Basic) It covers topics like Basic Routing, Rendering Elements,
+    State Management (Internal Component State), Handling Events, ES6 and JavaScript and Form Validation.`,
+  },
+  {
     name: "Foundational C-Sharp with Microsoft",
     from: "freeCodeCamp",
     url: `${freeCodeCamp}foundational-c-sharp-with-microsoft`,
+    image: `/images/FoundationalC-SharpCert.webp`,
+    description: `This certificate validates foundational knowledge of C#, including core syntax, 
+    data structures, object-oriented programming principles, and error handling.`,
   },
   {
     name: "Responsive Web Design",
     from: "freeCodeCamp",
     url: `${freeCodeCamp}responsive-web-design`,
+    image: `/images/ResponsiveWebDesignCert.webp`,
+    description: `It covers the principles of building responsive websites using HTML, CSS, and Flexbox, 
+    ensuring a seamless experience across various screen sizes.`,
   },
 ];
 
 // Socials
 export const socials = [
   {
-    name: "Linked in",
+    name: "Linkedin",
     iconUrl: "/linkedin.svg",
     url: 'https://www.linkedin.com/in/dounhuwardcaparas'
   },
@@ -178,4 +200,11 @@ export const accomplishments = [
   "Created engaging photo and video content for various projects",
   "Accurately encoded employee data to streamline processes",
   "Monitored CCTV systems, providing detailed reports for security enhancement"
+];
+
+export const navlinks = [
+  {label: "Home", url: "/" },
+  {label: "Achievements", url: "/achievement-page" },
+  {label: "Certificates", url: "/certificate-page" },
+  {label: "Projects", url: "/project-page" },
 ];

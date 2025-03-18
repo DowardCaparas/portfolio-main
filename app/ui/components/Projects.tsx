@@ -85,7 +85,7 @@ const ProjectCard = ({ name, description, url }: ProjectCardProps) => {
     >
       <span className="font-bold text-sm">{name}</span>
       <span className="text-sm">{description}</span>
-      <span className="px-2 py-1 bg-white text-xs z-50 mt-2">
+      <span className="px-2 py-1 bg-white text-xs mt-2">
         {customURL}
       </span>
     </button>

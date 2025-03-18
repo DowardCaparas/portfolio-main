@@ -5,8 +5,8 @@ import { Back } from "../ui/components/Buttons";
 
 const ProductPage = () => {
   return (
-    <div className="py-20 lg:px-32 md:px-16 px-4 w-full transition-all duration-150 ease-in">
-      <h2 className="font-bold text-2xl">Projects</h2>
+    <div className="lg:px-32 md:px-16 px-4 w-full transition-all duration-150 ease-in mt-10">
+      <h2 className="font-bold text-2xl mb-6">Projects</h2>
       <span>Click or tap a project to explore it.</span>
       
       <Back path="/" />
