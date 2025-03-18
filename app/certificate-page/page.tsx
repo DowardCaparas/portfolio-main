@@ -1,6 +1,5 @@
-import { Back, ShowCredential } from "../ui/components/Buttons";
+import { Back } from "../ui/components/Buttons";
 import { certificates } from "../lib/constants";
-import Image from "next/image";
 import { CertificateCardForPage } from "../ui/components/CertificationCard";
 
 const page = () => {
