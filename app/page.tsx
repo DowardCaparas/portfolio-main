@@ -159,7 +159,7 @@ const Home = () => {
             />
             <ViewAll path="/certificate-page" />
           </div>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-4">
             {certificates.map((cert) => (
               <div key={cert.name}>
                 <CertificateCardForHome
