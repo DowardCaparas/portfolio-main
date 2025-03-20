@@ -32,6 +32,7 @@ const Home = () => {
           width={160}
           height={160}
           className="rounded-lg max-sm:w-[70%]"
+          priority
         />
         <div className="flex flex-col max-sm:items-center max-sm:w-[70%]">
           <h1 className="font-bold text-2xl ">Doward Caparas</h1>
