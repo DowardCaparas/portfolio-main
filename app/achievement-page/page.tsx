@@ -4,7 +4,7 @@ import { Back } from "../ui/components/Buttons";
 const AchievementPage = () => {
   return (
     <div className="lg:px-32 md:px-16 px-4 w-full transition-all duration-150 ease-in mt-10">
-      <h2 className="font-bold text-2xl mb-6">Achievement</h2>
+      <h2 className="font-bold text-2xl mb-6">Achievements</h2>
       <Back path="/" />
       <div className="flex flex-col gap-4 items-center mt-20">
         <Image

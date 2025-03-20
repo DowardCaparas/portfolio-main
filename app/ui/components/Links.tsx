@@ -6,7 +6,7 @@ import { SocialsProps } from "@/app/lib/definition";
 
 const Links = ({ name, url, iconUrl }: SocialsProps) => {
   return (
-    <div className="flex gap-6 py-4">
+    <div className="flex gap-4 py-4">
       <Image
         src={iconUrl}
         alt={name}
@@ -16,7 +16,7 @@ const Links = ({ name, url, iconUrl }: SocialsProps) => {
       />
       <div className="inline-grid">
       <span className="font-semibold text-md">{name}</span>
-      <Link href={url} className="text-blue-500 hover:underline text-sm p-1">{url}</Link>
+      <Link href={url} className="text-blue-700 font-medium hover:underline text-sm p-1">{url}</Link>
       </div>
     </div>
   );

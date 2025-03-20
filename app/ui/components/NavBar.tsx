@@ -3,12 +3,28 @@
 import { navlinks } from "@/app/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    AOS.init();
+
+    const handleScroll = () => {
+      if(window.scrollY > 0){
+        setIsOpen(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+
+  }, []);
 
   return (
       <nav
@@ -55,7 +71,8 @@ const NavBar = () => {
             onClick={() => setIsOpen(false)} // Close when clicking outside
           >
             <div
-              className="absolute right-0 h-full w-[60%] max-w-xs bg-[#3a3a3a]"
+              data-aos="fade-left"
+              className="absolute top-0 right-0 h-full w-[60%] max-w-xs bg-[#3a3a3a]"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="mt-24 flex flex-col gap-1 text-white">

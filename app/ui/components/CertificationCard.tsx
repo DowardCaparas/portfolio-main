@@ -1,6 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ShowCredential } from "./Buttons";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const CertificateCardForHome = ({
   name,
@@ -48,8 +53,13 @@ export const CertificateCardForPage = ({
   image: string;
   description: string;
 }) => {
+
+  useEffect(() => {
+    AOS.init({ duration: 500 });
+  }, []);
+
   return (
-    <div className="flex flex-col gap-14">
+    <div data-aos="fade-up" className="flex flex-col gap-14">
       <div
         className="bg-gray-200 p-10 flex max-xl:flex-col 
           max-xl:items-center text-center gap-10 rounded-lg"

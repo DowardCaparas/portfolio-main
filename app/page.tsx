@@ -25,7 +25,7 @@ const Home = () => {
   return (
     <main className="flex flex-col lg:px-32 md:px-16 px-4 w-full transition-all duration-150 ease-in">
       {/* Image with details and buttons */}
-      <div className="flex max-sm:flex-col gap-6 font-medium my-12 items-center">
+      <div className="flex max-sm:flex-col gap-6 font-medium mt-20 mb-24 items-center">
         <Image
           src="/images/doward.webp"
           alt="Doward Caparas"

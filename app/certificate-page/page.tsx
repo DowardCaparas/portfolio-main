@@ -5,7 +5,7 @@ import { CertificateCardForPage } from "../ui/components/CertificationCard";
 const page = () => {
   return (
     <div className="lg:px-32 md:px-16 px-4 w-full transition-all duration-150 ease-in mt-10">
-      <h2 className="font-bold text-2xl mb-6">Certificates</h2>
+      <h2 className="font-bold text-2xl mb-6">Certifications</h2>
       <span>
         You can check it by tapping or clicking the &quot;show credential&quot; button
       </span>

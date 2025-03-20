@@ -204,7 +204,7 @@ export const accomplishments = [
 
 export const navlinks = [
   {label: "Home", url: "/" },
-  {label: "Achievements", url: "/achievement-page" },
+  {label: "My Achievements", url: "/achievement-page" },
   {label: "Certificates", url: "/certificate-page" },
   {label: "Projects", url: "/project-page" },
 ];

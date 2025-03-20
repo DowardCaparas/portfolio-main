@@ -4,6 +4,9 @@ import { ProjectArrayProps, ProjectCardProps } from "@/app/lib/definition";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const newWindow = (path: string) => {
   window.open(path, "_blank");
@@ -20,10 +23,15 @@ const Projects = ({
 }: ProjectArrayProps) => {
   const pathname = usePathname();
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
       {pathname === "/project-page" ? (
         <div
+          data-aos="fade-up"
           className="card inline-grid hover:shadow-lg active:bg-[#000000]
            duration-200 transition ease-in"
         >
