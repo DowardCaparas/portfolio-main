@@ -39,13 +39,14 @@ body {
 .achievement_card {
   border-radius: 12px;
   border: 1px solid #DFDEDA;
-  @apply bg-black text-white overflow-hidden p-3
+  @apply bg-black text-white overflow-hidden p-6
 }
 
 .project_card {
-  @apply hover:scale-105 transition shadow-md shadow-gray-200 active:scale-100 ease-in 
+  @apply hover:scale-105 transition shadow-md shadow-gray-200 active:scale-100 ease-in p-4
 }
 
 .certificate_card {
-  @apply flex justify-between items-center border p-3 rounded-lg 
+  @apply flex justify-between items-center border px-4 py-6 rounded-lg bg-[#eeeeee] 
+  hover:bg-[#dddddd] duration-200 transition-colors ease-in
 }

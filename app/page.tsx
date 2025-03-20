@@ -159,7 +159,7 @@ const Home = () => {
             />
             <ViewAll path="/my-certificates" />
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-2">
             {certificates.map((cert) => (
               <div key={cert.name}>
                 <CertificateCardForHome
@@ -201,7 +201,7 @@ const Home = () => {
                 <span className="font-bold text-xl">Best Capstone</span>
               </div>
               <span className="font-medium">Mobile game</span>
-              <p className="mt-2 text-sm">
+              <p className="my-4 text-sm">
                 Simian: A Mobile Educational Game for Primary Level in Learning
                 Space Science
               </p>

@@ -6,9 +6,7 @@ const AchievementPage = () => {
     <div className="lg:px-32 md:px-16 px-4 w-full transition-all duration-150 ease-in mt-10">
       <h2 className="font-bold text-2xl mb-6">Achievements</h2>
 
-      <span>
-        I am proud to showcase some of my achievements in life.
-      </span>
+      <span>I am proud to showcase some of my achievements in life.</span>
 
       <Back path="/" />
       <div className="flex flex-col gap-4 items-center mt-20">
@@ -32,7 +30,7 @@ const AchievementPage = () => {
           we spent thinking about how to build the system. Seeing our hard work
           pay off felt amazing. We couldn&apos;t have done it without God&apos;s
           help and the support of each other. <br />
-          <p className="indent-10">
+          <p className="indent-10 ">
             Our project was created using Unity3D and C#. It is a 2D game with
             fun features to help kids learn easily. The game teaches about
             planets, constellations, galaxies, and special materials found on
@@ -40,7 +38,15 @@ const AchievementPage = () => {
             Word Puzzle, and Sliding Puzzle.
           </p>
         </span>
+      <span className="text-2xl font-medium mt-20">Video Demo</span>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/mlCwDm5PmGY"
+        className="lg:h-[500px] mx-auto mt-8 md:w-[80%] w-full"
+      ></iframe>
       </div>
+      
     </div>
   );
 };

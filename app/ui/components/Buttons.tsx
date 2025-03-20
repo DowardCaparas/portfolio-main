@@ -83,9 +83,10 @@ export const Readmore = () => {
     <div className="mt-5 mb-2">
       <Link
         href="/my-achievements"
-        className="bg-white p-3 text-black rounded-lg text-sm hover:bg-slate-50 active:bg-slate-100"
+        className="bg-white p-3 text-black rounded-lg text-sm hover:bg-gray-200 active:bg-gray-300
+        font-medium"
       >
-        Read more
+        See Details
       </Link>
     </div>
   );
