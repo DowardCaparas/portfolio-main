@@ -98,7 +98,7 @@ const Home = () => {
               title="Recent Projects"
               iconUrl="/panels.svg"
             />
-            <ViewAll path="/project-page" />
+            <ViewAll path="/my-projects" />
           </div>
 
             <span className="text-sm font-medium mb-2">
@@ -157,7 +157,7 @@ const Home = () => {
               title="Recent Certifications"
               iconUrl="/shieldcheck.svg"
             />
-            <ViewAll path="/certificate-page" />
+            <ViewAll path="/my-certificates" />
           </div>
           <div className="flex flex-col gap-4">
             {certificates.map((cert) => (

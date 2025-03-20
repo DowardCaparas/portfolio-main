@@ -61,7 +61,7 @@ export const SendMail = () => {
 export const GoToProjectsButton = () => {
   return (
     <Link
-      href="/project-page"
+      href="/my-projects"
       className="p-2 flex gap-1 ring-black ring-1 justify-center rounded-lg
        w-full bg-black hover:shadow-md hover:shadow-[#222222] duration-150 ease-in
       active:scale-90 hover:scale-105 transition text-white"
@@ -82,7 +82,7 @@ export const Readmore = () => {
   return (
     <div className="mt-5 mb-2">
       <Link
-        href="/achievement-page"
+        href="/my-achievements"
         className="bg-white p-3 text-black rounded-lg text-sm hover:bg-slate-50 active:bg-slate-100"
       >
         Read more

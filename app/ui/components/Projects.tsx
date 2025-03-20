@@ -29,7 +29,7 @@ const Projects = ({
 
   return (
     <>
-      {pathname === "/project-page" ? (
+      {pathname === "/my-projects" ? (
         <div
           data-aos="fade-up"
           className="card inline-grid hover:shadow-lg active:bg-[#000000]
