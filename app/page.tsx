@@ -25,16 +25,16 @@ const Home = () => {
   return (
     <main className="flex flex-col lg:px-32 md:px-16 px-4 w-full transition-all duration-150 ease-in">
       {/* Image with details and buttons */}
-      <div className="flex max-sm:flex-col gap-6 font-medium mt-20 mb-24 items-center">
+      <div className="flex max-md:flex-col gap-6 font-medium mt-20 mb-20 items-center">
         <Image
           src="/images/doward.webp"
           alt="Doward Caparas"
-          width={160}
-          height={160}
-          className="rounded-lg max-sm:w-[70%]"
+          width={190}
+          height={190}
+          className="rounded-lg max-md:w-[50%]"
           priority
         />
-        <div className="flex flex-col max-sm:items-center xl:w-[40%] md:w-[60%] w-[70%]">
+        <div className="flex flex-col max-md:items-center xl:w-[35%] w-[55%]">
           <h1 className="font-bold text-2xl ">Doward Caparas</h1>
 
           {/* Location with icon */}
@@ -51,11 +51,11 @@ const Home = () => {
 
           <span className="text-sm mt-1">dounhuward.c@gmail.com</span>
 
-          <span className="my-4 text-sm flex-shrink font-semibold">
+          <span className="my-6 max-md:text-center flex-shrink font-semibold">
             Aspiring Full Stack Web Developer
           </span>
 
-          <div className="flex max-sm:flex-col w-full gap-6">
+          <div className="flex max-md:flex-col w-full gap-4">
             {/* Send email button */}
             <SendMail />
             {/* Go to project page button */}

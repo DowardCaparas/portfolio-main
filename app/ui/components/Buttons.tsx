@@ -43,7 +43,7 @@ export const SendMail = () => {
     <button
       onClick={handleClick}
       className="px-4 py-2 flex gap-1 ring-black ring-1 justify-center rounded-lg
-       w-full bg-white "
+       w-full bg-white hover:bg-gray-100 hover:ring-2 items-center"
     >
       <span className="font-semibold">Send me an email</span>
     </button>
@@ -54,8 +54,8 @@ export const GoToProjectsButton = () => {
   return (
     <Link
       href="/my-projects"
-      className="p-2 flex gap-1 ring-black ring-1 justify-center rounded-lg
-       w-full bg-black text-white"
+      className="px-4 py-2 flex gap-1 ring-black ring-1 justify-center rounded-lg
+       w-full bg-black text-white hover:bg-gray-900 hover:ring-2 items-center"
     >
       <span className="font-semibold">Projects</span>
     </Link>
