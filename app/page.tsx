@@ -34,7 +34,7 @@ const Home = () => {
           className="rounded-lg max-sm:w-[70%]"
           priority
         />
-        <div className="flex flex-col max-sm:items-center max-sm:w-[70%]">
+        <div className="flex flex-col max-sm:items-center xl:w-[40%] md:w-[60%] w-[70%]">
           <h1 className="font-bold text-2xl ">Doward Caparas</h1>
 
           {/* Location with icon */}
@@ -55,7 +55,7 @@ const Home = () => {
             Aspiring Full Stack Web Developer
           </span>
 
-          <div className="flex max-sm:flex-col w-full gap-3">
+          <div className="flex max-sm:flex-col w-full gap-6">
             {/* Send email button */}
             <SendMail />
             {/* Go to project page button */}
