@@ -29,22 +29,22 @@ const NavBar = () => {
   return (
       <nav
         className="bg-[#0E141E] transition-all duration-150 ease-in md:px-12 z-10
-    px-4 w-full text-white flex items-center justify-between max-md:py-4 fixed "
+    px-4 w-full text-white flex items-center justify-between max-md:py-2 fixed "
       >
         <Link href="/" className="font-extrabold text-xl">
           DC
         </Link>
 
         <button
-          className="hidden max-md:block"
+          className="hidden max-md:block hover:bg-gray-700 p-2 rounded-md"
           onClick={() => setIsOpen((prev) => !prev)}
           aria-label="opening nav bar for mobile devices"
         >
           <Image
             src={isOpen ? "/close.svg" : "/hamburger.svg"}
             alt="menu icon"
-            width={25}
-            height={25}
+            width={30}
+            height={30}
           />
         </button>
 
