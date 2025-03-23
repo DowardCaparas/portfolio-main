@@ -28,7 +28,7 @@ export const Back = ({ path }: { path: string }) => {
         height={18}
         className="object-contain"
       />
-      <span className="font-medium">Back to home</span>
+      <span className="font-medium">Back to Home</span>
     </Link>
   );
 };

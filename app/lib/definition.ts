@@ -8,12 +8,6 @@ export type ProjectArrayProps = {
       description: string;
 };
 
-export type ProjectCardProps = {
-      name: string;
-      description: string;
-      url: string;
-}
-
 export type SocialsProps = {
       name: string;
       url: string;

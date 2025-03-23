@@ -45,12 +45,14 @@ export const CertificateCardForPage = ({
   from,
   url,
   image,
+  date,
   description,
 }: {
   name: string;
   from: string;
   url: string;
   image: string;
+  date: string,
   description: string;
 }) => {
 
@@ -76,7 +78,8 @@ export const CertificateCardForPage = ({
             gap-6"
         >
           <span className="text-xl font-semibold">{name}</span>
-          <span className="">from: <span className="font-medium">{from}</span></span>
+          <span className="">From: <span className="font-medium">{from}</span></span>
+          <span className="">Earned on: <span className="font-medium">{date}</span></span>
           <p className="xl:text-justify md:w-[80%] leading-7">{description}</p>
           <ShowCredential url={url} />
         </div>

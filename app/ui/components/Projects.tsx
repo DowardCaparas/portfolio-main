@@ -1,18 +1,14 @@
-"use client";
+"use client"
 
-import { ProjectArrayProps, ProjectCardProps } from "@/app/lib/definition";
+import { ProjectArrayProps } from "@/app/lib/definition";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
 
 const newWindow = (path: string) => {
   window.open(path, "_blank");
 };
 
-const Projects = ({
+export const ProjectCardForPage = ({
   name,
   type,
   image,
@@ -21,19 +17,11 @@ const Projects = ({
   github,
   description,
 }: ProjectArrayProps) => {
-  const pathname = usePathname();
-
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   return (
-    <>
-      {pathname === "/my-projects" ? (
-        <div
-          data-aos="fade-up"
+    <div
           className="card inline-grid hover:shadow-lg active:bg-[#000000]
-           duration-200 transition ease-in"
+           duration-200 transition ease-in py-6"
         >
           <Link href={url} target="_blank" rel="noopener noreferrer">
             <Image
@@ -43,7 +31,7 @@ const Projects = ({
               height={500}
               className="object-contain w-full"
             />
-            <div className="p-5 border-t flex-col flex">
+            <div className="p-5 border-t flex-col flex gap-4">
               <div className="flex justify-between items-center">
                 <span className="font-bold">{name}</span>
                 {/* Github button */}
@@ -76,14 +64,10 @@ const Projects = ({
             </div>
           </Link>
         </div>
-      ) : (
-        <ProjectCard name={name} description={description} url={url} />
-      )}
-    </>
   );
 };
 
-const ProjectCard = ({ name, description, url }: ProjectCardProps) => {
+export const ProjectCardForHome = ({ name, description, url }: ProjectArrayProps) => {
   const customURL = url.slice(8);
   return (
     <button
@@ -100,4 +84,3 @@ const ProjectCard = ({ name, description, url }: ProjectCardProps) => {
   );
 };
 
-export default Projects;

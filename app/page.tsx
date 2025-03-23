@@ -8,7 +8,6 @@ import {
   skills,
   socials,
 } from "./lib/constants";
-import Projects from "./ui/components/Projects";
 import {
   GoToProjectsButton,
   Readmore,
@@ -18,6 +17,7 @@ import {
 import EducationCard from "./ui/components/EducationCard";
 import {CertificateCardForHome} from "./ui/components/CertificationCard";
 import Links from "./ui/components/Links";
+import { ProjectCardForHome } from "./ui/components/Projects";
 
 const Home = () => {
   const filteredProjectArray = projectArray.slice(0, 4);
@@ -108,7 +108,7 @@ const Home = () => {
 
             <div className="grid gap-7 grid-cols-1 mt-2 p-3">
               {filteredProjectArray.map((project) => (
-                <Projects
+                <ProjectCardForHome
                   key={project.name}
                   name={project.name}
                   image={project.image}

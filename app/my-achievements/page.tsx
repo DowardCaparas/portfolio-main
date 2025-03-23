@@ -38,15 +38,16 @@ const AchievementPage = () => {
             Word Puzzle, and Sliding Puzzle.
           </p>
         </span>
-      <span className="text-2xl font-medium mt-20">Video Demo</span>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/mlCwDm5PmGY"
-        className="lg:h-[500px] mx-auto mt-8 md:w-[80%] w-full"
-      ></iframe>
+        <span className="text-2xl font-medium mt-20">Video Demo</span>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/mlCwDm5PmGY"
+          className="lg:h-[500px] mx-auto mt-8 md:w-[80%] w-full"
+          allow="fullscreen"
+          allowFullScreen
+        ></iframe>
       </div>
-      
     </div>
   );
 };

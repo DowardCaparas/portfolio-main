@@ -1,7 +1,8 @@
 import React from "react";
 import { projectArray } from "../lib/constants";
-import ProjectCard from "../ui/components/Projects";
+
 import { Back } from "../ui/components/Buttons";
+import { ProjectCardForPage } from "../ui/components/Projects";
 
 const ProductPage = () => {
   return (
@@ -13,7 +14,7 @@ const ProductPage = () => {
 
       <div className="grid md:gap-16 gap-10 sm:grid-cols-2">
         {projectArray.map((project, index) => (
-            <ProjectCard
+            <ProjectCardForPage
               key={project.name + index}
               name={project.name}
               type={project.type}
