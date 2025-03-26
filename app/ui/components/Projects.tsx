@@ -75,7 +75,7 @@ export const ProjectCardForHome = ({ name, description, url }: ProjectArrayProps
       onClick={() => newWindow(url)}
       aria-label="going to new window"
     >
-      <span className="font-bold text-sm">{name}</span>
+      <span className="font-bold text-md">{name}</span>
       <span className="text-sm">{description}</span>
       <span className="px-2 py-1 bg-white text-xs mt-2">
         {customURL}

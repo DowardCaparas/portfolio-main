@@ -21,7 +21,8 @@ import { ProjectCardForHome } from "./ui/components/Projects";
 
 const Home = () => {
   const filteredProjectArray = projectArray.slice(0, 4);
-
+  const filteredCertificateArray = certificates.slice(0, 4);
+  
   return (
     <main className="flex flex-col lg:px-32 md:px-16 px-4 w-full transition-all duration-150 ease-in">
       {/* Image with details and buttons */}
@@ -68,7 +69,7 @@ const Home = () => {
         <div className="grid xl:grid-cols-2 grid-cols-1 gap-10">
           <div className="flex gap-10 flex-col">
             {/* About section */}
-            <section className="section_title card">
+            <section className="card">
               <SectionTitle title="About" iconUrl="/info.svg" />
               <p>
                 I&apos;m a full-stack web developer from the Philippines. I
@@ -86,14 +87,14 @@ const Home = () => {
             </section>
 
             {/* Tech stack section */}
-            <section className="section_title card">
+            <section className="card">
               <SectionTitle title="Tech Stack" iconUrl="/layers.svg" />
               <TechStack />
             </section>
           </div>
 
           {/* Project section */}
-          <section className="section_title card">
+          <section className="card">
           <div className="flex justify-between text-center">
             <SectionTitle
               title="Recent Projects"
@@ -122,7 +123,7 @@ const Home = () => {
         </div>
 
         {/* Experience section */}
-        <section className="section_title card">
+        <section className="card">
           <SectionTitle title="Experience" iconUrl="/shieldcheck.svg" />
           <div className="inline-grid">
             <span className="font-medium">
@@ -140,7 +141,7 @@ const Home = () => {
         </section>
 
         {/* Skills section */}
-        <section className="section_title card">
+        <section className="card">
           <SectionTitle title="Skills" iconUrl="/gear.svg" />
           <ul className="px-5">
             {skills.map((skill) => (
@@ -152,7 +153,7 @@ const Home = () => {
         </section>
 
         {/* Certificates section */}
-        <section className="section_title card">
+        <section className="card">
           <div className="flex justify-between items-center">
             <SectionTitle
               title="Recent Certifications"
@@ -160,8 +161,8 @@ const Home = () => {
             />
             <ViewAll path="/my-certificates" />
           </div>
-          <div className="flex flex-col gap-2">
-            {certificates.map((cert) => (
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 ">
+            {filteredCertificateArray.map((cert) => (
               <div key={cert.name}>
                 <CertificateCardForHome
                   name={cert.name}
@@ -173,9 +174,9 @@ const Home = () => {
           </div>
         </section>
 
-        <div className="flex gap-10 max-sm:flex-col">
+        <div className="flex gap-10 max-xl:flex-col">
           {/* Outside coding section */}
-          <section className="section_title card">
+          <section className="card">
             <SectionTitle title="Outside of coding" iconUrl="/bookopen.svg" />
             <p>
               When I&apos;m not coding, I&apos;m diving into React, MDN, and
@@ -188,7 +189,7 @@ const Home = () => {
           </section>
 
           {/* Achievement section */}
-          <section className="section_title card">
+          <section className="card">
             <SectionTitle title="Achievement" iconUrl="/trophy.svg" />
             <div className="achievement_card">
               <div className="flex items-center gap-2 mb-4">
@@ -215,13 +216,13 @@ const Home = () => {
         </div>
 
         {/* Education section */}
-        <section className="section_title card">
+        <section className="card">
           <SectionTitle title="Education" iconUrl="/graduationcap.svg" />
           <EducationCard />
         </section>
 
         {/* Links section */}
-        <section className="section_title card">
+        <section className="card">
           <SectionTitle title="Links" iconUrl="/link.svg" />
 
           <div className="flex flex-col items-start gap-4">

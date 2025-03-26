@@ -16,8 +16,8 @@ body {
   @apply border border-[#e6e6e6]
 }
 
-.section_title {
-  @apply p-10 rounded-xl
+section {
+  @apply md:p-10 p-7 rounded-xl
 }
 
 .tech_stack {

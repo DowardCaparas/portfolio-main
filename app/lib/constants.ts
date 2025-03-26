@@ -125,9 +125,25 @@ const freeCodeCamp = "https://www.freecodecamp.org/certification/Dounhuward_B_Ca
 
 export const certificates = [
   {
+    name: "SQL (Intermediate)",
+    from: "HackerRank",
+    url: `https://www.hackerrank.com/certificates/iframe/ec24b289f045`,
+    image: `/images/SQL(Intermediate)Cert.webp`,
+    date:"Mar 26, 2025",
+    description: `It includes complex joins, unions, and sub-queries.`,
+  },
+  {
+    name: "SQL (Basic)",
+    from: "HackerRank",
+    url: `https://www.hackerrank.com/certificates/iframe/ef81d36d6520`,
+    image: `/images/SQL(Basic)Cert.webp`,
+    date:"Mar 26, 2025",
+    description: `It includes simple queries, relationships, and aggregators.`,
+  },
+  {
     name: "Problem Solving (Basic)",
     from: "HackerRank",
-    url: `https://www.hackerrank.com/certificates/ec24b289f045`,
+    url: `https://www.hackerrank.com/certificates/iframe/ec24b289f045`,
     image: `/images/ProblemSolving(Basic)Cert.webp`,
     date:"Mar 17, 2025",
     description: `It covers basic topics of Data Structures (such as Arrays, Strings) 
@@ -136,7 +152,7 @@ export const certificates = [
   {
     name: "React (Basic)",
     from: "HackerRank",
-    url: `https://www.hackerrank.com/certificates/57c3315cf170`,
+    url: `https://www.hackerrank.com/certificates/iframe/57c3315cf170`,
     image: `/images/React(Basic)Cert.webp`,
     date:"Mar 17, 2025",
     description: `React (Basic) It covers topics like Basic Routing, Rendering Elements,
