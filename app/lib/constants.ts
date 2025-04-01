@@ -191,11 +191,6 @@ export const socials = [
     url: 'https://github.com/DowardCaparas'
   },
   {
-    name: "Tiktok",
-    iconUrl: "/tiktok.svg",
-    url: 'https://www.tiktok.com/@dowardcps?_t=ZS-8tr6VKCO5FH&_r=1'
-  },
-  {
     name: "HackerRank",
     iconUrl: "/hackerrank.svg",
     url: 'https://www.hackerrank.com/profile/dounhuward_c'
