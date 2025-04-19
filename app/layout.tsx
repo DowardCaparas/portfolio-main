@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import Script from "next/script";
 import NavBar from "./ui/components/NavBar";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
@@ -23,22 +22,6 @@ export default function RootLayout({
         <NavBar />
         <div className="py-20">{children}</div>
 
-        {/* Embedded Chatbot Script */}
-        <Script
-          id="chatbot-config"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.embeddedChatbotConfig = {
-                chatbotId: "cOWIZgQezkVlIHKguM5Kl",
-                domain: "www.chatbase.co"
-              };
-            `,
-          }}
-        />
-        <Script
-          src="https://www.chatbase.co/embed.min.js"
-          strategy="lazyOnload" // Ensures it loads after the page
-        />
         {/* Footer */}
         <footer className="text-center flex flex-col my-10 text-sm">
           <span>&copy; 2025 Dounhuward B. Caparas</span>
